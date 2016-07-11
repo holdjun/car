@@ -1,0 +1,12 @@
+..\obj\dmacnt.o: ..\SRC\USER\dmacnt.c
+..\obj\dmacnt.o: ..\SRC\USER\dmacnt.h
+..\obj\dmacnt.o: ..\SRC\FWLIB\DMA\dma.h
+..\obj\dmacnt.o: ..\SRC\FWLIB\SYS\sys.h
+..\obj\dmacnt.o: ..\SRC\STARTUP\MK60DZ10.h
+..\obj\dmacnt.o: D:\Keil_v5\ARM\CMSIS\Include\core_cm4.h
+..\obj\dmacnt.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\dmacnt.o: D:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+..\obj\dmacnt.o: D:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+..\obj\dmacnt.o: D:\Keil_v5\ARM\CMSIS\Include\core_cm4_simd.h
+..\obj\dmacnt.o: ..\SRC\STARTUP\system_MK60DZ10.h
+..\obj\dmacnt.o: ..\SRC\FWLIB\GPIO\gpio.h

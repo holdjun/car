@@ -1,0 +1,52 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: OLD JOHNH, OLDJOHNH, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.14.0.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      Segger\JL2CM3.dll V2.99.13.0
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+C:\Users\oldjo\Desktop\2016-7-6\PRJ\template.uvproj
+Project File Date:  07/04/2015
+
+<h2>Output:</h2>
+Build target 'Template'
+compiling main.c...
+..\SRC\USER\main.c(31): error:  #29: expected an expression
+        error         = (int){speed_ept - now_speed);
+..\SRC\USER\main.c(63): warning:  #12-D: parsing restarts here after previous syntax error
+        FTM_InitStruct1.Frequency = 100;                // 1KHZ
+..\SRC\USER\main.c(64): error:  #20: identifier "FTM_InitStruct1" is undefined
+        FTM_InitStruct1.FTMxMAP = FTM1_CH1_PB1;          //FTM0_CH0 PC1引脚
+..\SRC\USER\main.c(72): error:  #20: identifier "DMACNT_InitStruct1" is undefined
+        DMACNT_InitStruct1.DMACNT_Mode = DMACNT_MODE_RISING;  //上升沿计数
+..\SRC\USER\main.c(78): error:  #20: identifier "PIT_InitStruct1" is undefined
+        PIT_InitStruct1.PITx=PIT0; 
+..\SRC\USER\main.c(92): error:  #20: identifier "FTMDuty" is undefined
+                                                FTMDuty += 500;
+..\SRC\USER\main.c(102): error:  #20: identifier "FTMDuty" is undefined
+                                                FTMDuty -= 500;
+..\SRC\USER\main.c(111): error:  #169: expected a declaration
+  }
+..\SRC\USER\main.c(118): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+..\SRC\USER\main.c: 2 warnings, 7 errors
+"..\OBJ\template.axf" - 7 Error(s), 2 Warning(s).
+Target not created.
+</pre>
+</body>
+</html>

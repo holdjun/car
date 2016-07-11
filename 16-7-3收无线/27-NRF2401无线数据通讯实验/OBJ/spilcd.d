@@ -1,0 +1,13 @@
+..\obj\spilcd.o: ..\SRC\HARDWARE\SPILCD\spilcd.c
+..\obj\spilcd.o: ..\SRC\HARDWARE\SPILCD\spilcd.h
+..\obj\spilcd.o: ..\SRC\FWLIB\GPIO\gpio.h
+..\obj\spilcd.o: ..\SRC\FWLIB\SYS\sys.h
+..\obj\spilcd.o: ..\SRC\STARTUP\MK60DZ10.h
+..\obj\spilcd.o: D:\keil\ARM\CMSIS\Include\core_cm4.h
+..\obj\spilcd.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\spilcd.o: D:\keil\ARM\CMSIS\Include\core_cmInstr.h
+..\obj\spilcd.o: D:\keil\ARM\CMSIS\Include\core_cmFunc.h
+..\obj\spilcd.o: D:\keil\ARM\CMSIS\Include\core_cm4_simd.h
+..\obj\spilcd.o: ..\SRC\STARTUP\system_MK60DZ10.h
+..\obj\spilcd.o: ..\SRC\FWLIB\SPI\spi.h
+..\obj\spilcd.o: ..\SRC\HARDWARE\SPILCD\font.h

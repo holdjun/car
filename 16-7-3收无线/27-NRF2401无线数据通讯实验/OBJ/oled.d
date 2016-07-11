@@ -1,0 +1,11 @@
+..\obj\oled.o: ..\SRC\HARDWARE\oled\oled.c
+..\obj\oled.o: ..\SRC\FWLIB\GPIO\gpio.h
+..\obj\oled.o: ..\SRC\FWLIB\SYS\sys.h
+..\obj\oled.o: ..\SRC\STARTUP\MK60DZ10.h
+..\obj\oled.o: D:\keil\ARM\CMSIS\Include\core_cm4.h
+..\obj\oled.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\oled.o: D:\keil\ARM\CMSIS\Include\core_cmInstr.h
+..\obj\oled.o: D:\keil\ARM\CMSIS\Include\core_cmFunc.h
+..\obj\oled.o: D:\keil\ARM\CMSIS\Include\core_cm4_simd.h
+..\obj\oled.o: ..\SRC\STARTUP\system_MK60DZ10.h
+..\obj\oled.o: ..\SRC\HARDWARE\oled\oled.h
