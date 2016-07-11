@@ -107,6 +107,18 @@ int main(void)
 	FTM_InitStruct1.FTM_Mode = FTM_Mode_EdgeAligned; //边沿对齐模式
 	FTM_InitStruct1.InitalDuty = 0;               //初始化后产生0%的占空比
 	FTM_Init(&FTM_InitStruct1);
+	
+	FTM_InitStruct1.Frequency = 1000;                // 1KHZ
+	FTM_InitStruct1.FTMxMAP = FTM1_CH1_PB1;          //右边的电机
+	FTM_InitStruct1.FTM_Mode = FTM_Mode_EdgeAligned; //边沿对齐模式
+	FTM_InitStruct1.InitalDuty = 0;               //初始化后产生0%的占空比
+	FTM_Init(&FTM_InitStruct1);
+	
+	FTM_InitStruct1.Frequency = 1000;                // 1KHZ
+	FTM_InitStruct1.FTMxMAP = FTM0_CH0_PC1 ;          //左边的电机
+	FTM_InitStruct1.FTM_Mode = FTM_Mode_EdgeAligned; //边沿对齐模式
+	FTM_InitStruct1.InitalDuty = 0;               //初始化后产生0%的占空比
+	FTM_Init(&FTM_InitStruct1);
 	//***********************************************************
 	
 	
@@ -139,23 +151,38 @@ int main(void)
 		while(run==1)
 		{
 			if((GPIO_ReadInputDataBit(PTD, GPIO_Pin_10)==1||GPIO_ReadInputDataBit(PTD,GPIO_Pin_8)==1)&&(GPIO_ReadInputDataBit(PTB,GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTA, GPIO_Pin_28)==0))
-			{
+			{//向右转
 				FTMDuty_right -= sub;
+				FTM_PWM_ChangeDuty(FTM0_CH4_PD4,(uint32_t)FTMDuty_right);
+				FTM_PWM_ChangeDuty(FTM1_CH0_PB0,(uint32_t)FTMDuty_left);
 			}
 			if((GPIO_ReadInputDataBit(PTD, GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTD,GPIO_Pin_8)==0)&&(GPIO_ReadInputDataBit(PTB,GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTA, GPIO_Pin_28)==0))
 			{
-				FTMDuty_right =8000;
-				FTMDuty_left =8000;
+				FTMDuty_right =10000;
+				FTMDuty_left =10000;
+				FTM_PWM_ChangeDuty(FTM0_CH4_PD4,(uint32_t)FTMDuty_right);
+				FTM_PWM_ChangeDuty(FTM1_CH0_PB0,(uint32_t)FTMDuty_left);
 			}
 			if((GPIO_ReadInputDataBit(PTD, GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTD,GPIO_Pin_8)==0)&&(GPIO_ReadInputDataBit(PTB,GPIO_Pin_10)==1||GPIO_ReadInputDataBit(PTA, GPIO_Pin_28)==1))
 			{
 				FTMDuty_left -= sub;
+				FTM_PWM_ChangeDuty(FTM0_CH4_PD4,(uint32_t)FTMDuty_right);
+				FTM_PWM_ChangeDuty(FTM1_CH0_PB0,(uint32_t)FTMDuty_left);
 			}
+			if((GPIO_ReadInputDataBit(PTD, GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTD,GPIO_Pin_8)==0)&&(GPIO_ReadInputDataBit(PTB,GPIO_Pin_10)==1&&GPIO_ReadInputDataBit(PTA, GPIO_Pin_28)==1))
+			{
+				FTM_PWM_ChangeDuty(FTM0_CH0_PC1,7000);
+				FTM_PWM_ChangeDuty(FTM0_CH4_PD4,7000);
+			}
+			if((GPIO_ReadInputDataBit(PTD, GPIO_Pin_10)==1&&GPIO_ReadInputDataBit(PTD,GPIO_Pin_8)==1)&&(GPIO_ReadInputDataBit(PTB,GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTA, GPIO_Pin_28)==0))
+			{
+				FTM_PWM_ChangeDuty(FTM1_CH0_PB0,7000);
+				FTM_PWM_ChangeDuty(FTM1_CH1_PB1,7000);
+			}
+			
 			if(FTMDuty_left<=1500) FTMDuty_left=2000;
 			if(FTMDuty_right<=1500) FTMDuty_right=2000;
 			
-			FTM_PWM_ChangeDuty(FTM0_CH4_PD4,(uint32_t)FTMDuty_right);
-			FTM_PWM_ChangeDuty(FTM1_CH0_PB0,(uint32_t)FTMDuty_left);
 			
 			OLED_Write_Char(1,0, GPIO_ReadInputDataBit(PTB,GPIO_Pin_10));	
 			OLED_Write_Char(2,0, GPIO_ReadInputDataBit(PTA,GPIO_Pin_28));	
