@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\OBJ\template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\OBJ\template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Mon Jul 11 11:19:01 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Wed Jul 13 18:31:28 2016
 <BR><P>
 <H3>Maximum Stack Usage =        148 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -671,7 +671,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[88]"></a>key_scan</STRONG> (Thumb, 900 bytes, Stack size 8 bytes, main.o(.text))
+<P><STRONG><a name="[88]"></a>key_scan</STRONG> (Thumb, 898 bytes, Stack size 8 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = key_scan &rArr; FTM_PWM_ChangeDuty &rArr; assert_failed &rArr; UART_printf &rArr; printn &rArr;  printn (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Write_String
@@ -687,7 +687,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[82]"></a>main</STRONG> (Thumb, 1334 bytes, Stack size 32 bytes, main.o(.text))
+<P><STRONG><a name="[82]"></a>main</STRONG> (Thumb, 2158 bytes, Stack size 32 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = main &rArr; FTM_Init &rArr; FTM_PWM_ChangeDuty &rArr; assert_failed &rArr; UART_printf &rArr; printn &rArr;  printn (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockSetup
@@ -699,6 +699,7 @@ Global Symbols
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_Init
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DelayMs
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DelayInit
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_scan
 </UL>
@@ -808,7 +809,8 @@ Global Symbols
 <P><STRONG><a name="[8a]"></a>DelayMs</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, delay.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DelayMs
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_scan
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;key_scan
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ENET_Init
 </UL>
 

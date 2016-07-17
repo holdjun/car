@@ -25,6 +25,7 @@
 ..\obj\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\main.o: ..\SRC\FWLIB\I2C\i2c.h
+..\obj\main.o: ..\SRC\USER\oled.h
 ..\obj\main.o: ..\SRC\FWLIB\PDB\pdb.h
 ..\obj\main.o: ..\SRC\FWLIB\CAN\can.h
 ..\obj\main.o: ..\SRC\FWLIB\SD\sd.h

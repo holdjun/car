@@ -15,6 +15,7 @@
 #include "spi.h"
 #include "enet.h"
 #include "i2c.h"
+#include "oled.h"
 #include "pdb.h"
 #include "can.h"
 #include "sd.h"
@@ -25,22 +26,18 @@
 #include "mma845x.h"
 
 void key_scan();								//按键检测
-uint8_t i = 0;									//定位箭头的位置
+uint8_t i = 0,cross_flag = 1;		//定位箭头的位置
 uint32_t flag = 0;							//进入看占空比
-uint8_t run = 0;
-uint16_t FTMDuty_left = 8000;   //两个占空比
-uint16_t FTMDuty_right = 8000;
+uint8_t run = 0,chuang1,chuang2,chuang3,chuang4,chuang5,chuang6;
+uint16_t FTMDuty_left = 10000;   //两个占空比
+uint16_t FTMDuty_right = 10000;
 
-uint16_t x1,x2,x3,x4;
+uint16_t FTMDuty_reverse_left = 10000;   //两个占空比
+uint16_t FTMDuty_reverse_right = 10000;
 
-uint16_t FTMDuty_reverse_left = 8000;   //两个占空比
-uint16_t FTMDuty_reverse_right = 8000;
-
-uint8_t p = 0;									//指向左右的占空比
+uint8_t p = 0;													 //指向左右的占空比
 uint16_t sub = 1400;
 
-//uint8_t buffer1,buffer2;
-//uint8_t a,b;
 
 int main(void)
 {
@@ -139,16 +136,12 @@ int main(void)
 	//*********************************************************
 	//OLED界面初始化
 	OLED_Write_Char(0,0,43);
-	OLED_Write_String(2,0,"Mode");
+	OLED_Write_String(2,0,"Speed");
 	OLED_Write_Char(6,0,1);
-	OLED_Write_String(2,2,"Mode");
+	OLED_Write_String(2,2,"Sub");
 	OLED_Write_Char(6,2,2);
 	OLED_Write_String(2,4,"Mode");
 	OLED_Write_Char(6,4,3);
-//	FLASH_ReadByte(101,1,&a);//两个占空比
-//	FTMDuty_left =(uint16_t)250*a;
-//	FLASH_ReadByte(102,1,&b);//两个占空比
-//	FTMDuty_right =250*(uint16_t)b;
 	//**********************************************************
 	while(1)
 	{
@@ -156,81 +149,190 @@ int main(void)
 		
 		while(run == 1)
 		{
-			if((GPIO_ReadInputDataBit(PTD, GPIO_Pin_10) == 1 || GPIO_ReadInputDataBit(PTD,GPIO_Pin_8) == 1 ) && (GPIO_ReadInputDataBit(PTB,GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTA, GPIO_Pin_28)==0))
+			chuang1 = GPIO_ReadInputDataBit(PTB, GPIO_Pin_10);
+			chuang2 = GPIO_ReadInputDataBit(PTA, GPIO_Pin_28);
+			chuang3 = GPIO_ReadInputDataBit(PTD, GPIO_Pin_10);
+			chuang4 = GPIO_ReadInputDataBit(PTD, GPIO_Pin_8) ;
+			chuang5 = GPIO_ReadInputDataBit(PTA, GPIO_Pin_16);
+			chuang6 = GPIO_ReadInputDataBit(PTA, GPIO_Pin_14);
+
+			if((chuang3 == 1 || chuang4 == 1) && (chuang1 == 0 && chuang2 == 0)){
+				DelayMs(30);
+				if((chuang3 == 1 || chuang4 == 1) && (chuang1 == 0 && chuang2 == 0))
 			{//向右转
-				if((GPIO_ReadInputDataBit(PTD, GPIO_Pin_10)==1&&GPIO_ReadInputDataBit(PTD,GPIO_Pin_8)==1)&&(GPIO_ReadInputDataBit(PTB,GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTA, GPIO_Pin_28)==0))
+				if((chuang3 == 1 && chuang4 == 1) && (chuang1 == 0 && chuang2 == 0))
 				{
-					FTMDuty_left = 9000;
-					FTMDuty_right = 1;
-					FTMDuty_reverse_left = 1;
-					FTMDuty_reverse_right = 9000;
+					FTMDuty_left 					= 10000;
+					FTMDuty_right 				= 1;
+					FTMDuty_reverse_left  = 1;
+					FTMDuty_reverse_right = 8500;
+					while(chuang5 == 0 && chuang6 == 0)
+						{
+							FTM_PWM_ChangeDuty(FTM0_CH4_PD4,(uint32_t)FTMDuty_right);
+							FTM_PWM_ChangeDuty(FTM1_CH0_PB0,(uint32_t)FTMDuty_left);
+							FTM_PWM_ChangeDuty(FTM0_CH0_PC1,(uint32_t)FTMDuty_reverse_left);
+							FTM_PWM_ChangeDuty(FTM1_CH1_PB1,(uint32_t)FTMDuty_reverse_right);
+						}
 				}
 				else 
 				{
-					FTMDuty_left = x1;
-					FTMDuty_right = 1;
-					FTMDuty_reverse_left = 1;
+					FTMDuty_left 					= 10000;
+					FTMDuty_right 				= 1;
+					FTMDuty_reverse_left 	= 1;
 					FTMDuty_reverse_right = 1;					
-					FTM_PWM_ChangeDuty(FTM0_CH4_PD4,(uint32_t)FTMDuty_right);
-					FTM_PWM_ChangeDuty(FTM1_CH0_PB0,(uint32_t)FTMDuty_left);
-					FTM_PWM_ChangeDuty(FTM0_CH0_PC1,(uint32_t)FTMDuty_reverse_left);
-					FTM_PWM_ChangeDuty(FTM1_CH1_PB1,(uint32_t)FTMDuty_reverse_right);
-					while(!(GPIO_ReadInputDataBit(PTD, GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTD,GPIO_Pin_8)==0)&&(GPIO_ReadInputDataBit(PTB,GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTA, GPIO_Pin_28)==0));
 				}
 			}
-			if((GPIO_ReadInputDataBit(PTD, GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTD,GPIO_Pin_8)==0)&&(GPIO_ReadInputDataBit(PTB,GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTA, GPIO_Pin_28)==0))
-			{//直走
-				FTMDuty_right = x2;
-				FTMDuty_left = x1;
+		}
+			if((chuang3 == 0 && chuang4 == 0) && (chuang1 == 0 && chuang2 == 0))
+ 			{//直走
+				FTMDuty_right 				= 10000;
+				FTMDuty_left 					= 10000;
+				FTMDuty_reverse_left 	= 1;
 				FTMDuty_reverse_right = 1;
-				FTMDuty_reverse_left = 1;
 			}
-			if((GPIO_ReadInputDataBit(PTD, GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTD,GPIO_Pin_8)==0)&&(GPIO_ReadInputDataBit(PTB,GPIO_Pin_10)==1||GPIO_ReadInputDataBit(PTA, GPIO_Pin_28)==1))
-			{
-				if((GPIO_ReadInputDataBit(PTD, GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTD,GPIO_Pin_8)==0)&&(GPIO_ReadInputDataBit(PTB,GPIO_Pin_10)==1&&GPIO_ReadInputDataBit(PTA, GPIO_Pin_28)==1))
+			if((chuang3 == 0 && chuang4 == 0) && (chuang1 == 1 || chuang2 == 1)){
+				DelayMs(30);
+				if((chuang3 == 0 && chuang4 == 0) && (chuang1 == 1 || chuang2 == 1))
+			{//向左转
+				if((chuang3 == 0 && chuang4 == 0) && (chuang1 == 1 && chuang2 == 1))
 				{
-					FTMDuty_left = 1;
-					FTMDuty_right = 9000;
-					FTMDuty_reverse_left = 9000;
+					FTMDuty_left 					= 1;
+					FTMDuty_right 				= 10000;
+					FTMDuty_reverse_left 	= 8500;
+					FTMDuty_reverse_right = 1;
+					while(chuang5 == 0 && chuang6 == 0)
+						{
+							FTM_PWM_ChangeDuty(FTM0_CH4_PD4,(uint32_t)FTMDuty_right);
+							FTM_PWM_ChangeDuty(FTM1_CH0_PB0,(uint32_t)FTMDuty_left);
+							FTM_PWM_ChangeDuty(FTM0_CH0_PC1,(uint32_t)FTMDuty_reverse_left);
+							FTM_PWM_ChangeDuty(FTM1_CH1_PB1,(uint32_t)FTMDuty_reverse_right);
+						}
+				}
+				else 
+				{
+					FTMDuty_left 					= 1;
+					FTMDuty_right 				= 10000;
+					FTMDuty_reverse_left 	= 1;
+					FTMDuty_reverse_right = 1;		
+				}
+			}
+			}
+			if((((chuang3 == 1 && chuang4 == 1) && (chuang1 == 1 || chuang2 == 1)) || ((chuang3 == 1 || chuang4 == 1) && (chuang1 == 1 && chuang2 == 1))) && (chuang5 || chuang6) == 1)
+			{//十字
+				if(cross_flag == 1)
+				{
+					FTMDuty_left 					= 10000;
+					FTMDuty_right 				= 10000;
+					FTMDuty_reverse_left 	= 1;
 					FTMDuty_reverse_right = 1;
 				}
-				else 
+				if(cross_flag == 0) 
 				{
-					FTMDuty_left = 1;
-					FTMDuty_right = x2;
-					FTMDuty_reverse_left = 1;
-					FTMDuty_reverse_right = 1;					
-				}
+						FTMDuty_left 					= 1;
+						FTMDuty_right 				= 10000;
+						FTMDuty_reverse_left 	= 8500;
+						FTMDuty_reverse_right = 1;
+						FTM_PWM_ChangeDuty(FTM0_CH4_PD4,(uint32_t)FTMDuty_right);
+						FTM_PWM_ChangeDuty(FTM1_CH0_PB0,(uint32_t)FTMDuty_left);
+						FTM_PWM_ChangeDuty(FTM0_CH0_PC1,(uint32_t)FTMDuty_reverse_left);
+						FTM_PWM_ChangeDuty(FTM1_CH1_PB1,(uint32_t)FTMDuty_reverse_right);
+						DelayMs(250);
+						while(chuang5 == 0 && chuang6 == 0)
+							{
+								FTMDuty_left 					= 1;
+								FTMDuty_right 				= 10000;
+								FTMDuty_reverse_left 	= 8500;
+								FTMDuty_reverse_right = 1;
+								FTM_PWM_ChangeDuty(FTM0_CH4_PD4,(uint32_t)FTMDuty_right);
+								FTM_PWM_ChangeDuty(FTM1_CH0_PB0,(uint32_t)FTMDuty_left);
+								FTM_PWM_ChangeDuty(FTM0_CH0_PC1,(uint32_t)FTMDuty_reverse_left);
+								FTM_PWM_ChangeDuty(FTM1_CH1_PB1,(uint32_t)FTMDuty_reverse_right);
+							}
+					}
+					cross_flag = 1;
+			}
+			if((chuang3 == 1 && chuang4 == 0) && (chuang1 == 0 && chuang2 == 1) && ((chuang5 || chuang6) == 0))
+			{//死路
+				cross_flag = !cross_flag;
+				OLED_Write_Char(8,0, cross_flag);	
+				FTMDuty_left 					= 10000;
+				FTMDuty_right 				= 1;
+				FTMDuty_reverse_left 	= 1;
+				FTMDuty_reverse_right = 10000;
 				FTM_PWM_ChangeDuty(FTM0_CH4_PD4,(uint32_t)FTMDuty_right);
 				FTM_PWM_ChangeDuty(FTM1_CH0_PB0,(uint32_t)FTMDuty_left);
 				FTM_PWM_ChangeDuty(FTM0_CH0_PC1,(uint32_t)FTMDuty_reverse_left);
 				FTM_PWM_ChangeDuty(FTM1_CH1_PB1,(uint32_t)FTMDuty_reverse_right);
-				while(!(GPIO_ReadInputDataBit(PTD, GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTD,GPIO_Pin_8)==0)&&(GPIO_ReadInputDataBit(PTB,GPIO_Pin_10)==0&&GPIO_ReadInputDataBit(PTA, GPIO_Pin_28)==0));
+				DelayMs(2000);
 			}
 			
-//			if(FTMDuty_left<=1500) FTMDuty_left=2000;
-//			if(FTMDuty_right<=1500) FTMDuty_right=2000;
+			if((chuang3 == 1 && chuang4 == 1) && (chuang1 == 0 && chuang2 == 0) && ((chuang5 || chuang6) == 1))
+			{//右T字
+				FTMDuty_left 					= 10000;
+				FTMDuty_right 				= 10000;
+				FTMDuty_reverse_left 	= 1;
+				FTMDuty_reverse_right = 1;
+			}
+			if((chuang3 == 0 && chuang4 == 0) && (chuang1 == 1 && chuang2 == 1) && ((chuang5 || chuang6) == 1))
+			{//左T字
+			 //向右转
+					FTMDuty_left 					= 1;
+					FTMDuty_right 				= 10000;
+					FTMDuty_reverse_left 	= 8500;
+					FTMDuty_reverse_right = 1;
+					FTM_PWM_ChangeDuty(FTM0_CH4_PD4,(uint32_t)FTMDuty_right);
+					FTM_PWM_ChangeDuty(FTM1_CH0_PB0,(uint32_t)FTMDuty_left);
+					FTM_PWM_ChangeDuty(FTM0_CH0_PC1,(uint32_t)FTMDuty_reverse_left);
+					FTM_PWM_ChangeDuty(FTM1_CH1_PB1,(uint32_t)FTMDuty_reverse_right);
+					DelayMs(250);
+					while(chuang5 == 0 && chuang6 == 0)
+				{
+					FTMDuty_left 					= 1;
+					FTMDuty_right 				= 10000;
+					FTMDuty_reverse_left 	= 8500;
+					FTMDuty_reverse_right = 1;
+					FTM_PWM_ChangeDuty(FTM0_CH4_PD4,(uint32_t)FTMDuty_right);
+					FTM_PWM_ChangeDuty(FTM1_CH0_PB0,(uint32_t)FTMDuty_left);
+					FTM_PWM_ChangeDuty(FTM0_CH0_PC1,(uint32_t)FTMDuty_reverse_left);
+					FTM_PWM_ChangeDuty(FTM1_CH1_PB1,(uint32_t)FTMDuty_reverse_right);
+				}
+			}
+			if((chuang3 == 1 && chuang4 == 1) && (chuang1 == 1 && chuang2 == 1) && (chuang5 == 0 && chuang6 == 0))
+			{//T左转
+				FTMDuty_left 					= 10000;
+				FTMDuty_right 				= 1;
+				FTMDuty_reverse_left  = 1;
+				FTMDuty_reverse_right = 8500;
+				while(chuang5 == 0 && chuang6 == 0)
+					{
+						FTM_PWM_ChangeDuty(FTM0_CH4_PD4,(uint32_t)FTMDuty_right);
+						FTM_PWM_ChangeDuty(FTM1_CH0_PB0,(uint32_t)FTMDuty_left);
+						FTM_PWM_ChangeDuty(FTM0_CH0_PC1,(uint32_t)FTMDuty_reverse_left);
+						FTM_PWM_ChangeDuty(FTM1_CH1_PB1,(uint32_t)FTMDuty_reverse_right);
+					}
+			}
 			
 			FTM_PWM_ChangeDuty(FTM0_CH4_PD4,(uint32_t)FTMDuty_right);
 			FTM_PWM_ChangeDuty(FTM1_CH0_PB0,(uint32_t)FTMDuty_left);
 			FTM_PWM_ChangeDuty(FTM0_CH0_PC1,(uint32_t)FTMDuty_reverse_left);
 			FTM_PWM_ChangeDuty(FTM1_CH1_PB1,(uint32_t)FTMDuty_reverse_right);
 			
-			
-			
-			
-			OLED_Write_Char(1,0, GPIO_ReadInputDataBit(PTB,GPIO_Pin_10));	
+			OLED_Write_Char(1,0, chuang1);	
 			OLED_Write_Char(2,0, GPIO_ReadInputDataBit(PTA,GPIO_Pin_28));	
 			OLED_Write_Char(3,0, GPIO_ReadInputDataBit(PTD,GPIO_Pin_10));	
-			OLED_Write_Char(4,0, GPIO_ReadInputDataBit(PTD,GPIO_Pin_8));	
-			OLED_Write_Char(5,0, GPIO_ReadInputDataBit(PTA,GPIO_Pin_16));	
-			OLED_Write_Char(6,0, GPIO_ReadInputDataBit(PTA,GPIO_Pin_14));	
+			OLED_Write_Char(4,0, chuang4);	
+			OLED_Write_Char(5,0, chuang5);	
+			OLED_Write_Char(6,0, chuang6);	
 			OLED_Write_String(2,2,"left:");
 			OLED_Write_Num5(8,2, FTMDuty_left);
 			OLED_Write_String(2,4,"right:");
 			OLED_Write_Num5(8,4, FTMDuty_right);
-			__nop();
 		}
+	}
+	
+	while(run == 2)
+	{
+		
 	}
 }
 
@@ -263,8 +365,6 @@ void key_scan()
 					if(i == 0)
 					{
 						run = 1;
-						x1 = FTMDuty_left;
-						x2 = FTMDuty_right;
 						OLED_Write_Char(0,p * 2,' ');
 						OLED_Write_String(0,4,"runing......");
 						DelayMs(2500);
@@ -396,8 +496,3 @@ void key_scan()
 		}
 	}
 }
-
-
-
-
-
