@@ -38,12 +38,17 @@ uint16_t FTMDuty_2 = 1300;
 uint16_t LeftLast[5];
 uint16_t Left;
 uint16_t CenterLast[5];
-uint16_t Center = 63;
+uint16_t Center = 64;
 uint16_t RightLast[5];
 uint16_t Right;
 //uint8_t Width;//ÈüµÀ¿í¶È
 uint16_t Budao;
 uint16_t hang = 1;
+uint16_t leixin = 0;
+uint16_t saoxian = 64;
+uint8_t flag_black;
+uint8_t flag_miss;
+uint8_t flag_miss_record;
 
 
 uint8_t Pixel[128];
@@ -129,7 +134,8 @@ int main(void)
 //				Sd_X();
 			}
 			CCD_HeiXian();
-			if(Center - 64 <= 7 || 63 - Center <= 7) FTM_PWM_ChangeDuty(FTM1_CH0_PB0,FTMDuty_1);
+//			if(Center - 64 <= 7 || 63 - Center <= 7)
+			FTM_PWM_ChangeDuty(FTM1_CH0_PB0,FTMDuty_1);
 //			if(Center - 64 >= 7 || 63 - Center >= 7) 
 //			{
 //				if(jiansuflag <= 4) 									FTM_PWM_ChangeDuty(FTM1_CH0_PB0,0);

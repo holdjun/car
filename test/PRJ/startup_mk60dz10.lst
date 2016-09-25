@@ -1148,11 +1148,11 @@ ARM Macro Assembler    Page 18
               00000400 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4 --apcs=interw
-ork --depend=..\obj\startup_mk60dz10.d -o..\obj\startup_mk60dz10.o -IC:\Users\o
-ldjo\Desktop\test\PRJ\RTE -IF:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
- -IDevice\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SE
-TA 514" --predefine="_RTE_ SETA 1" --list=.\startup_mk60dz10.lst ..\SCR\STARTUP
-\startup_MK60DZ10.s
+ork --depend=..\obj\startup_mk60dz10.d -o..\obj\startup_mk60dz10.o -ID:\car\tes
+t\PRJ\RTE -IF:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include -IDevice\Includ
+e --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 514" --predef
+ine="_RTE_ SETA 1" --list=.\startup_mk60dz10.lst ..\SCR\STARTUP\startup_MK60DZ1
+0.s
 
 
 

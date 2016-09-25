@@ -298,72 +298,129 @@ void LB(void)
 void CCD_HeiXian(void)
 {
 	uint8_t i;
-	for(i = Center;i <= 122;i++)
+	for(i = saoxian;i <= 122;i++)
 	{
 		Right = i;
 		if(Pixel[i] == 0) break;
 	}
-	for(i = Center;i >= 6;i--)
+	for(i = saoxian;i >= 6;i--)
 	{
 		Left = i;
 		if(Pixel[i] == 0) break;
 	}
-//	if (Left != 6 && Right != 122) Budao = (Right - Left) / 2;
-//	if (Left == Right)
-//		{
-//			Left = LeftLast[0];
-//			Right = RightLast[0];
-//			Center = CenterLast[0];
-//		}
-
-//	if (Left != 6 && Right == 122)
-//		{
-//				for (i = Center; i <= 122; i++)
-//				{
-//						Right = i;
-//						if(Pixel[i] == 0) break;
-//				}
-//				if(Righ£»!= 122) Center = (Right + Left) / 2;
-//				else
-//				{
-//				  Center = Left + Budao;
-//					if (Center > 128) Center = 128;
-//					if (Center < (Right + Left) / 2) Center = (Right + Left) / 2;
-//			}
-//		}
-
-//	if (Left == 6 && Right != 122)  
-//		{
-//				for (i = Center; i >= 6; i--)
-//				{
-//						Left = i;
-//						if(Pixel[i] == 0) break;
-//				}
-//				if(Left != 6) Center = (Right + Left ) / 2;
-//				else
-//				{
-//					if (Right >= Budao) Center = Right - Budao;
-//					else Center = 0;
-//					if (Center > (Right + Left) / 2) Center = (Right + Left) / 2;
-//			}
-//		}
-		
+	if (Left != 6 && Right != 122 && leixin == 0) Budao = (Right - Left) / 2;
 	
-//	if (Left != 6 && Right != 122) 
-		Center = (Right + Left) / 2;
-		
+/***********************buxianchuli*************************************/
+	
+	if (Left != 6 && Right == 122)
+		{
+				for (i = saoxian; i <= 122; i++)
+				{
+						Right = i;
+						if(Pixel[i] == 0) break;
+				}
+				if(Right!= 122) Center = (Right + Left) / 2;
+				else
+				{
+				  Center = Left + Budao;
+					if (Center > 128) Center = 128;
+					if (Center < (Right + Left) / 2) Center = (Right + Left) / 2;
+			}
+		}
+
+	if (Left == 6 && Right != 122)  
+		{
+				for (i = saoxian; i >= 6; i--)
+				{
+						Left = i;
+						if(Pixel[i] == 0) break;
+				}
+				if(Left != 6) Center = (Right + Left ) / 2;
+				else
+				{
+					if (Right >= Budao) Center = Right - Budao;
+					else Center = 0;
+					if (Center > (Right + Left) / 2) Center = (Right + Left) / 2;
+			}
+		} 
+	
+	if (Left != 6 && Right != 122) Center = (Right + Left) / 2;
+
+/*	if (Left == 6 && Right == 122)
+//	{
+//		if (flag_black == 0) flag_miss = 1;
+//	}		
+//
+//	
+//	if (flag_miss == 1)
+//	{
+//			for(i = shaoxian;i <= 122;i++)
+//		{
+//			Right = i;
+//			if(Pixel[i] == 0)
+//			{
+//				flag_miss = 0;
+//				break;
+//			}
+//		}
+//		for(i = shaoxian;i >= 6;i--)
+//		{
+//			Left = i;
+//			if(Pixel[i] == 0)
+//			{
+//				flag_miss = 0;
+//				break;
+//			}
+//		}
+//		if (Left != 6 && Right == 122)
+//			{
+//						Center = Left + Budao;
+//						if (Center > 128) Center = 128;
+//						if (Center < (Right + Left) / 2) Center = (Right + Left) / 2;
+//			}
+
+//		if (Left == 6 && Right != 122)  
+//			{
+//						if (Right >= Budao) Center = Right - Budao;
+//						else Center = 0;
+//						if (Center > (Right + Left) / 2) Center = (Right + Left) / 2;
+//			}
+//			
+//		
+//		if (Left != 6 && Right != 122) Center = (Right + Left) / 2;
+//		
+//		if (Left == 6 && Right == 122)
+//			{
+//					flag_black = 1;
+//				  flag_miss = 0;
+//					if (CenterLast[0] < 64)  flag_miss_record = 1;//×ó×ª
+//					if (CenterLast[0] >= 64) flag_miss_record = 2;//ÓÒ×ª
+//			}
+//	}
+//		if(Left <= 12 && Right >= 120 && CenterLast[0] < 70 && CenterLast[0] > 55)
+//		{
+//			DelayNs();
+//			Center = 64;
+//		}	
+//		*/
+
 		if(Center <= 17 || Center >= 110 || Right == Left)
 		{
 			Left = LeftLast[0];
 			Right = RightLast[0];
 			Center = (Left + Right) / 2;
 		}
-		if(Left <= 12 && Right >= 120 && CenterLast[0] < 70 && CenterLast[0] > 55)
-		{
-			DelayNs();
-			Center = 64;
-		}	
-		
+	
+	if(Center > 44 && Center <88 && CenterLast[0] > 44 && CenterLast[0] < 88 )
+	{
+		leixin = 0;//zhidao
+	}
+	
+	if((Center <= 44 && Left <= 13) || (Center >=84 && Left >= 115))
+	{
+		leixin = 1;//wandao
+	}
+	
 	/*********************************************************************/	
 		LeftLast[4] = LeftLast[3];
 		LeftLast[3] = LeftLast[2];
@@ -376,34 +433,43 @@ void CCD_HeiXian(void)
 		RightLast[2] = RightLast[1];
 		RightLast[1] = RightLast[0];
 		RightLast[0] = Right;
-		
+
 		CenterLast[4] = CenterLast[3];
 		CenterLast[3] = CenterLast[2];
 		CenterLast[2] = CenterLast[1];
 		CenterLast[1] = CenterLast[0];
 		CenterLast[0] = Center;
 		
+		saoxian = Center;
+	
+		if(saoxian >= 122) saoxian = 122;
+	  if(saoxian <= 6) 	 saoxian = 6;
+		if(Center >= 122)  Center  = 122;
+	  if(Center <= 6) 	 Center  = 6;
+		
 	if(Center <= 63)
 	{
-		if(63 - Center <= 7)											FTMDuty = 4700 + (63 - Center) * a1;
-		if(63 - Center <= 15 && 63 - Center > 7)  FTMDuty = 4700 + (63 - Center) * a2;
-		if(63 - Center <= 25 && 63 - Center > 15) FTMDuty = 4700 + (63 - Center) * a3;
-		if(63 - Center <= 40 && 63 - Center > 25) FTMDuty = 4700 + (63 - Center) * a4;
-		if(63 - Center >  40)											FTMDuty = 4700 + (63 - Center) * a5;
+		if(63 - Center <= 7)											FTMDuty = 4700 - (63 - Center) * a1;
+		if(63 - Center <= 15 && 63 - Center > 7)  FTMDuty = 4700 - (63 - Center) * a2;
+		if(63 - Center <= 25 && 63 - Center > 15) FTMDuty = 4700 - (63 - Center) * a3;
+		if(63 - Center <= 40 && 63 - Center > 25) FTMDuty = 4700 - (63 - Center) * a4;
+		if(63 - Center >  40)											FTMDuty = 4700 - (63 - Center) * a5;
 		
 		FTM_PWM_ChangeDuty(FTM0_CH4_PA7,FTMDuty);
-		if(FTMDuty >= 5800) FTMDuty = 5800;
+		
+		if(FTMDuty <= 4000) FTMDuty = 4000;
 	}
 	if(Center >= 64)
 	{
-		if (Center - 64 <= 7)											 FTMDuty = 4700 - (Center - 64) * a1;
-		if (Center - 64 <= 15 && Center - 64 > 7)  FTMDuty = 4700 - (Center - 64) * a2;
-		if (Center - 64 <= 25 && Center - 64 > 15) FTMDuty = 4700 - (Center - 64) * a3;
-		if (Center - 64 <= 40 && Center - 64 > 25) FTMDuty = 4700 - (Center - 64) * a4;
-		if (Center - 64 >  40)    								 FTMDuty = 4700 - (Center - 64) * a5;
+		if (Center - 64 <= 7)											 FTMDuty = 4700 + (Center - 64) * a1;
+		if (Center - 64 <= 15 && Center - 64 > 7)  FTMDuty = 4700 + (Center - 64) * a2;
+		if (Center - 64 <= 25 && Center - 64 > 15) FTMDuty = 4700 + (Center - 64) * a3;
+		if (Center - 64 <= 40 && Center - 64 > 25) FTMDuty = 4700 + (Center - 64) * a4;
+		if (Center - 64 >  40)    								 FTMDuty = 4700 + (Center - 64) * a5;
 
 		FTM_PWM_ChangeDuty(FTM0_CH4_PA7,FTMDuty);
-		if(FTMDuty <= 4000) FTMDuty = 4000;
+		
+		if(FTMDuty >= 5800) FTMDuty = 5800;
 	}
 
 }

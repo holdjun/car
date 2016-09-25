@@ -29,6 +29,11 @@ extern uint16_t Right;//右线
 //extern uint8_t Width;//赛道宽度
 extern uint16_t Budao;
 extern uint16_t hang;
+extern uint16_t leixin;
+extern uint16_t saoxian;
+extern uint8_t flag_black;
+extern uint8_t flag_miss;
+extern uint8_t flag_miss_record;
 
 extern uint32_t SD_X;
 extern uint32_t SD_D;
