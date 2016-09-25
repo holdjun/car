@@ -1,0 +1,11 @@
+..\obj\mma845x.o: ..\SRC\HARDWARE\MMA845x\mma845x.c
+..\obj\mma845x.o: ..\SRC\HARDWARE\MMA845x\mma845x.h
+..\obj\mma845x.o: ..\SRC\FWLIB\I2C\i2c.h
+..\obj\mma845x.o: ..\SRC\FWLIB\SYS\sys.h
+..\obj\mma845x.o: ..\SRC\STARTUP\MK60DZ10.h
+..\obj\mma845x.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h
+..\obj\mma845x.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\obj\mma845x.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h
+..\obj\mma845x.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h
+..\obj\mma845x.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h
+..\obj\mma845x.o: ..\SRC\STARTUP\system_MK60DZ10.h

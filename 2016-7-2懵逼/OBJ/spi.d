@@ -1,0 +1,10 @@
+..\obj\spi.o: ..\SRC\FWLIB\SPI\spi.c
+..\obj\spi.o: ..\SRC\FWLIB\SPI\spi.h
+..\obj\spi.o: ..\SRC\FWLIB\SYS\sys.h
+..\obj\spi.o: ..\SRC\STARTUP\MK60DZ10.h
+..\obj\spi.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h
+..\obj\spi.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\obj\spi.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h
+..\obj\spi.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h
+..\obj\spi.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h
+..\obj\spi.o: ..\SRC\STARTUP\system_MK60DZ10.h

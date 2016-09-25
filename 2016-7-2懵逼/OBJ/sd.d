@@ -1,0 +1,11 @@
+..\obj\sd.o: ..\SRC\FWLIB\SD\sd.c
+..\obj\sd.o: ..\SRC\FWLIB\SD\sd.h
+..\obj\sd.o: ..\SRC\FWLIB\SYS\sys.h
+..\obj\sd.o: ..\SRC\STARTUP\MK60DZ10.h
+..\obj\sd.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h
+..\obj\sd.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\obj\sd.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h
+..\obj\sd.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h
+..\obj\sd.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h
+..\obj\sd.o: ..\SRC\STARTUP\system_MK60DZ10.h
+..\obj\sd.o: ..\SRC\FWLIB\DELAY\delay.h

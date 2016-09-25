@@ -1,0 +1,10 @@
+..\obj\dac.o: ..\SRC\FWLIB\DAC\dac.c
+..\obj\dac.o: ..\SRC\FWLIB\DAC\DAC.h
+..\obj\dac.o: ..\SRC\FWLIB\SYS\sys.h
+..\obj\dac.o: ..\SRC\STARTUP\MK60DZ10.h
+..\obj\dac.o: F:\apps\keil\ARM\CMSIS\Include\core_cm4.h
+..\obj\dac.o: F:\apps\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\dac.o: F:\apps\keil\ARM\CMSIS\Include\core_cmInstr.h
+..\obj\dac.o: F:\apps\keil\ARM\CMSIS\Include\core_cmFunc.h
+..\obj\dac.o: F:\apps\keil\ARM\CMSIS\Include\core_cm4_simd.h
+..\obj\dac.o: ..\SRC\STARTUP\system_MK60DZ10.h

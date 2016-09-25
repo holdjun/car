@@ -1,0 +1,11 @@
+..\obj\uart.o: ..\SRC\FWLIB\UART\uart.c
+..\obj\uart.o: ..\SRC\FWLIB\UART\uart.h
+..\obj\uart.o: ..\SRC\FWLIB\SYS\sys.h
+..\obj\uart.o: ..\SRC\STARTUP\MK60DZ10.h
+..\obj\uart.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4.h
+..\obj\uart.o: D:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\obj\uart.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h
+..\obj\uart.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h
+..\obj\uart.o: D:\Keil\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm4_simd.h
+..\obj\uart.o: ..\SRC\STARTUP\system_MK60DZ10.h
+..\obj\uart.o: D:\Keil\ARM\ARMCC\bin\..\include\string.h
