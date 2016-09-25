@@ -1,0 +1,12 @@
+..\obj\nrf2401.o: ..\SCR\HARDWARE\NRF2401\nrf2401.c
+..\obj\nrf2401.o: ..\SCR\HARDWARE\NRF2401\NRF2401.H
+..\obj\nrf2401.o: ..\SCR\FWLIB\SYS\sys.h
+..\obj\nrf2401.o: ..\SCR\STARTUP\MK60DZ10.h
+..\obj\nrf2401.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h
+..\obj\nrf2401.o: F:\apps\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\nrf2401.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h
+..\obj\nrf2401.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
+..\obj\nrf2401.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h
+..\obj\nrf2401.o: ..\SCR\STARTUP\system_MK60DZ10.h
+..\obj\nrf2401.o: ..\SCR\FWLIB\GPIO\gpio.h
+..\obj\nrf2401.o: ..\SCR\FWLIB\SPI\spi.h

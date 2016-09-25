@@ -1,0 +1,15 @@
+..\obj\data_sent.o: ..\SCR\HARDWARE\DATA_SEND\data_sent.c
+..\obj\data_sent.o: ..\SCR\HARDWARE\DATA_SEND\data_sent.h
+..\obj\data_sent.o: ..\SCR\FWLIB\UART\uart.h
+..\obj\data_sent.o: ..\SCR\FWLIB\SYS\sys.h
+..\obj\data_sent.o: ..\SCR\STARTUP\MK60DZ10.h
+..\obj\data_sent.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h
+..\obj\data_sent.o: F:\apps\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\data_sent.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h
+..\obj\data_sent.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
+..\obj\data_sent.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h
+..\obj\data_sent.o: ..\SCR\STARTUP\system_MK60DZ10.h
+..\obj\data_sent.o: ..\SCR\FWLIB\oled\OLED.h
+..\obj\data_sent.o: ..\SCR\FWLIB\DMA\dma.h
+..\obj\data_sent.o: ..\SCR\FWLIB\GPIO\gpio.h
+..\obj\data_sent.o: ..\SCR\USER\Mydefine.h

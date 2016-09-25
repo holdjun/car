@@ -1,0 +1,20 @@
+Dependencies for Project 'text', Target 'Target 1': (DO NOT MODIFY !)
+F (..\SCR\USER\isr.c)(0x51D9098C)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections-I C:\Users\最最\Desktop\text\PRJ\RTE-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DMK60DN512xxx10-o .\objects\isr.o --omf_browse .\objects\isr.crf --depend .\objects\isr.d)
+I (..\SCR\USER\isr.h)(0x51D773A2)
+F (..\SCR\USER\main.c)(0x51E0A58E)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections-I C:\Users\最最\Desktop\text\PRJ\RTE-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DMK60DN512xxx10-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\SCR\STARTUP\MK60DZ10.h)(0x508759BA)()
+F (..\SCR\STARTUP\startup_MK60DZ10.s)(0x508759AC)(--cpu Cortex-M4 -g --apcs=interwork -I C:\Users\最最\Desktop\text\PRJ\RTE-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include--pd "__UVISION_VERSION SETA 514" --pd "_RTE_ SETA 1" --pd "MK60DN512xxx10 SETA 1"--list .\listings\startup_mk60dz10.lst --xref -o .\objects\startup_mk60dz10.o --depend .\objects\startup_mk60dz10.d)
+F (..\SCR\STARTUP\system_MK60DZ10.c)(0x508759AC)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections-I C:\Users\最最\Desktop\text\PRJ\RTE-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DMK60DN512xxx10-o .\objects\system_mk60dz10.o --omf_browse .\objects\system_mk60dz10.crf --depend .\objects\system_mk60dz10.d)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
+I (..\SCR\STARTUP\MK60DZ10.h)(0x508759BA)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
+I (d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
+I (..\SCR\STARTUP\system_MK60DZ10.h)(0x508759B8)
+F (..\SCR\STARTUP\system_MK60DZ10.h)(0x508759B8)()
+F (..\SCR\FWLIB\GPIO\gpio.c)(0x51E0A432)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections-I C:\Users\最最\Desktop\text\PRJ\RTE-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DMK60DN512xxx10-o .\objects\gpio.o --omf_browse .\objects\gpio.crf --depend .\objects\gpio.d)
+I (..\SCR\FWLIB\GPIO\gpio.h)(0x51DCB96A)
+F (..\SCR\FWLIB\SYS\sys.c)(0x51B11AD0)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections-I C:\Users\最最\Desktop\text\PRJ\RTE-I d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I d:\Keil_v5\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DMK60DN512xxx10-o .\objects\sys.o --omf_browse .\objects\sys.crf --depend .\objects\sys.d)
+I (..\SCR\FWLIB\SYS\sys.h)(0x51D02E34)
+F (d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Lib\ARM\arm_cortexM4l_math.lib)(0x540CF30A)()

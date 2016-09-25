@@ -1,0 +1,9 @@
+..\sys.o: ..\SCR\FWLIB\SYS\sys.c
+..\sys.o: ..\SCR\FWLIB\SYS\sys.h
+..\sys.o: ..\SCR\STARTUP\MK60DZ10.h
+..\sys.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h
+..\sys.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\sys.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h
+..\sys.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
+..\sys.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h
+..\sys.o: ..\SCR\STARTUP\system_MK60DZ10.h

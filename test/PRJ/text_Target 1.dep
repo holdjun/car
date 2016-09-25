@@ -1,0 +1,14 @@
+Dependencies for Project 'text', Target 'Target 1': (DO NOT MODIFY !)
+F (..\SCR\USER\isr.c)(0x51D9098C)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections-I F:\arm\text\PRJ\RTE-I d:\Keil_v5\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-I d:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DMK60DN512xxx10-o .\isr.o --omf_browse .\isr.crf --depend .\isr.d)
+I (..\SCR\USER\isr.h)(0x51D773A2)
+F (..\SCR\USER\main.c)(0x51E0A58E)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections-I F:\arm\text\PRJ\RTE-I d:\Keil_v5\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-I d:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DMK60DN512xxx10-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+F (..\SCR\FWLIB\GPIO\gpio.c)(0x51E0A432)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections-I F:\arm\text\PRJ\RTE-I d:\Keil_v5\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-I d:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DMK60DN512xxx10-o .\gpio.o --omf_browse .\gpio.crf --depend .\gpio.d)
+I (..\SCR\FWLIB\GPIO\gpio.h)(0x51DCB96A)
+F (..\SCR\FWLIB\SYS\sys.c)(0x51B11AD0)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections-I F:\arm\text\PRJ\RTE-I d:\Keil_v5\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-I d:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DMK60DN512xxx10-o .\sys.o --omf_browse .\sys.crf --depend .\sys.d)
+I (..\SCR\FWLIB\SYS\sys.h)(0x51D02E34)
+F (..\SCR\STARTUP\MK60DZ10.h)(0x508759BA)()
+F (..\SCR\STARTUP\startup_MK60DZ10.s)(0x508759AC)(--cpu Cortex-M4 -g --apcs=interwork -I F:\arm\text\PRJ\RTE-I d:\Keil_v5\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-I d:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 514" --pd "MK60DN512xxx10 SETA 1"--list .\startup_mk60dz10.lst --xref -o .\startup_mk60dz10.o --depend .\startup_mk60dz10.d)
+F (..\SCR\STARTUP\system_MK60DZ10.c)(0x508759AC)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections-I F:\arm\text\PRJ\RTE-I d:\Keil_v5\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-I d:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="514" -DMK60DN512xxx10-o .\system_mk60dz10.o --omf_browse .\system_mk60dz10.crf --depend .\system_mk60dz10.d)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
+I (..\SCR\STARTUP\MK60DZ10.h)(0x508759BA)
+F (..\SCR\STARTUP\system_MK60DZ10.h)(0x508759B8)()

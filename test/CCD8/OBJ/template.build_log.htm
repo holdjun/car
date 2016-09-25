@@ -1,0 +1,127 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: s s, s, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.14.0.0
+Toolchain Path:  F:\apps\keil\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      Segger\JL2CM3.dll V2.99.13.0
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+C:\Users\oldjo\Desktop\CCD8\PRJ\template.uvprojx
+Project File Date:  09/12/2016
+
+<h2>Output:</h2>
+Build target 'Template'
+compiling system_MK60DZ10.c...
+assembling startup_MK60DZ10.s...
+compiling main.c...
+..\SRC\HARDWARE\menu\menu.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\SRC\USER\define.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\SRC\HARDWARE\YINJIAO\yinjiao.h(48): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\SRC\USER\main.c(68): warning:  #177-D: variable "p" was declared but never referenced
+        int p=0,q=0;
+..\SRC\USER\main.c(68): warning:  #177-D: variable "q" was declared but never referenced
+        int p=0,q=0;
+..\SRC\USER\main.c: 5 warnings, 0 errors
+compiling isr.c...
+..\SRC\USER\define.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\SRC\USER\isr.c(128): warning:  #1-D: last line of file ends without a newline
+  }
+..\SRC\USER\isr.c: 2 warnings, 0 errors
+compiling sys.c...
+compiling delay.c...
+compiling dma.c...
+compiling ftm.c...
+compiling gpio.c...
+compiling lptm.c...
+compiling pit.c...
+compiling rtc.c...
+compiling uart.c...
+compiling wdog.c...
+compiling adc.c...
+compiling pdb.c...
+compiling dac.c...
+compiling spi.c...
+compiling i2c.c...
+compiling can.c...
+compiling flash.c...
+compiling sd.c...
+compiling tsi.c...
+compiling enet.c...
+compiling led.c...
+..\SRC\HARDWARE\LED\led.c(22): warning:  #177-D: variable "GPIO_InitStruct1" was declared but never referenced
+  GPIO_InitTypeDef GPIO_InitStruct1;
+..\SRC\HARDWARE\LED\led.c: 1 warning, 0 errors
+compiling spiflash.c...
+compiling spilcd.c...
+..\SRC\HARDWARE\SPILCD\spilcd.c(145): warning:  #177-D: variable "SPI_InitStruct1" was declared but never referenced
+        SPI_InitTypeDef SPI_InitStruct1;
+..\SRC\HARDWARE\SPILCD\spilcd.c: 1 warning, 0 errors
+compiling mma845x.c...
+..\SRC\HARDWARE\MMA845x\mma845x.c(29): warning:  #223-D: function "I2C_IsLineBusy" declared implicitly
+        while(I2C_IsLineBusy(I2C1) == TRUE);
+..\SRC\HARDWARE\MMA845x\mma845x.c(62): warning:  #177-D: variable "i" was declared but never referenced
+        uint8_t i;
+..\SRC\HARDWARE\MMA845x\mma845x.c: 2 warnings, 0 errors
+compiling oled.c...
+..\SRC\HARDWARE\oled\oled.c(519): warning:  #186-D: pointless comparison of unsigned integer with zero
+                if(y<=6&&y>=0){
+..\SRC\HARDWARE\oled\oled.c(540): warning:  #186-D: pointless comparison of unsigned integer with zero
+        if(y<=6&&y>=0){
+..\SRC\HARDWARE\oled\oled.c(560): warning:  #186-D: pointless comparison of unsigned integer with zero
+        if(y<=6&&y>=0){
+..\SRC\HARDWARE\oled\oled.c(580): warning:  #186-D: pointless comparison of unsigned integer with zero
+        if(y<=6&&y>=0){
+..\SRC\HARDWARE\oled\oled.c: 4 warnings, 0 errors
+compiling ccd.c...
+..\SRC\USER\define.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\SRC\HARDWARE\YINJIAO\yinjiao.h(48): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\SRC\HARDWARE\CCD\ccd.c(129): warning:  #550-D: variable "j" was set but never used
+        uint8_t i,value_max,value_min,j;
+..\SRC\HARDWARE\CCD\ccd.c: 3 warnings, 0 errors
+compiling data_sent.c...
+..\SRC\USER\define.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\SRC\HARDWARE\data_sent\data_sent.c: 1 warning, 0 errors
+compiling menu.c...
+..\SRC\HARDWARE\menu\menu.h(8): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\SRC\USER\define.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\SRC\HARDWARE\YINJIAO\yinjiao.h(48): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\SRC\HARDWARE\menu\menu.c(19): warning:  #940-D: missing return statement at end of non-void function "yiwei"
+  }
+..\SRC\HARDWARE\menu\menu.c: 4 warnings, 0 errors
+compiling yinjiao.c...
+..\SRC\HARDWARE\YINJIAO\yinjiao.h(48): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\SRC\HARDWARE\YINJIAO\yinjiao.c(101): warning:  #1-D: last line of file ends without a newline
+  }
+..\SRC\HARDWARE\YINJIAO\yinjiao.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=24548 RO-data=2228 RW-data=100 ZI-data=15724  
+"..\OBJ\template.axf" - 0 Error(s), 25 Warning(s).
+</pre>
+</body>
+</html>

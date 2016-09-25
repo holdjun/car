@@ -1,0 +1,60 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Evan US, MS, LIC=JDAUH-W2MVH-WJ16K-ZW2DU-BQK6G-9507X
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.14.0.0
+Toolchain Path:  d:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      UL2CM3.DLL V1.155.0.0
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+F:\arm\text\PRJ\text.uvprojx
+Project File Date:  06/26/2015
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling isr.c...
+..\SCR\USER\isr.h(4): error:  #5: cannot open source input file "sys.h": No such file or directory
+  #include "sys.h"
+..\SCR\USER\isr.c: 0 warnings, 1 error
+compiling main.c...
+..\SCR\USER\main.c(1): error:  #5: cannot open source input file "sys.h": No such file or directory
+  #include "sys.h"
+..\SCR\USER\main.c: 0 warnings, 1 error
+compiling gpio.c...
+..\SCR\FWLIB\GPIO\gpio.h(17): error:  #5: cannot open source input file "sys.h": No such file or directory
+  #include "sys.h"
+..\SCR\FWLIB\GPIO\gpio.c: 0 warnings, 1 error
+compiling sys.c...
+..\SCR\FWLIB\SYS\sys.h(18): error:  #5: cannot open source input file "MK60DZ10.h": No such file or directory
+  #include "MK60DZ10.h"
+..\SCR\FWLIB\SYS\sys.c: 0 warnings, 1 error
+assembling startup_MK60DZ10.s...
+compiling system_MK60DZ10.c...
+..\SCR\STARTUP\MK60DZ10.h(223): error:  #5: cannot open source input file "core_cm4.h": No such file or directory
+  #include "core_cm4.h"                  /* Core Peripheral Access Layer */
+..\SCR\STARTUP\system_MK60DZ10.c: 0 warnings, 1 error
+".\text.axf" - 5 Error(s), 0 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  F:\arm\text\PRJ\RTE
+  d:\Keil_v5\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+</pre>
+</body>
+</html>

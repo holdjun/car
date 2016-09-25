@@ -1,0 +1,12 @@
+..\obj\dmacnt.o: ..\SCR\FWLIB\dmacnt\dmacnt.c
+..\obj\dmacnt.o: ..\SCR\FWLIB\dmacnt\dmacnt.h
+..\obj\dmacnt.o: ..\SCR\FWLIB\DMA\dma.h
+..\obj\dmacnt.o: ..\SCR\FWLIB\SYS\sys.h
+..\obj\dmacnt.o: ..\SCR\STARTUP\MK60DZ10.h
+..\obj\dmacnt.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h
+..\obj\dmacnt.o: F:\apps\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\dmacnt.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h
+..\obj\dmacnt.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
+..\obj\dmacnt.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h
+..\obj\dmacnt.o: ..\SCR\STARTUP\system_MK60DZ10.h
+..\obj\dmacnt.o: ..\SCR\FWLIB\GPIO\gpio.h

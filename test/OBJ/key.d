@@ -1,0 +1,11 @@
+..\obj\key.o: ..\SCR\HARDWARE\KEY\key.c
+..\obj\key.o: ..\SCR\HARDWARE\KEY\key.h
+..\obj\key.o: ..\SCR\FWLIB\GPIO\gpio.h
+..\obj\key.o: ..\SCR\FWLIB\SYS\sys.h
+..\obj\key.o: ..\SCR\STARTUP\MK60DZ10.h
+..\obj\key.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h
+..\obj\key.o: F:\apps\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\key.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h
+..\obj\key.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
+..\obj\key.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h
+..\obj\key.o: ..\SCR\STARTUP\system_MK60DZ10.h

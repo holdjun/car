@@ -1,0 +1,10 @@
+..\obj\wdog.o: ..\SCR\FWLIB\WDOG\wdog.c
+..\obj\wdog.o: ..\SCR\FWLIB\WDOG\wdog.h
+..\obj\wdog.o: ..\SCR\FWLIB\SYS\sys.h
+..\obj\wdog.o: ..\SCR\STARTUP\MK60DZ10.h
+..\obj\wdog.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h
+..\obj\wdog.o: F:\apps\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\wdog.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h
+..\obj\wdog.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
+..\obj\wdog.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h
+..\obj\wdog.o: ..\SCR\STARTUP\system_MK60DZ10.h

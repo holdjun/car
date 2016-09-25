@@ -1,0 +1,11 @@
+..\isr.o: ..\SCR\USER\isr.c
+..\isr.o: ..\SCR\USER\isr.h
+..\isr.o: ..\SCR\FWLIB\SYS\sys.h
+..\isr.o: ..\SCR\STARTUP\MK60DZ10.h
+..\isr.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h
+..\isr.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\isr.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h
+..\isr.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
+..\isr.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h
+..\isr.o: ..\SCR\STARTUP\system_MK60DZ10.h
+..\isr.o: ..\SCR\FWLIB\GPIO\gpio.h

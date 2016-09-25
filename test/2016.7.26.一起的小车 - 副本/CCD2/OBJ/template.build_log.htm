@@ -1,0 +1,78 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: s s, s, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.14.0.0
+Toolchain Path:  F:\apps\keil\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      Segger\JL2CM3.dll V2.99.13.0
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+C:\Users\oldjo\Desktop\2016.7.26.一起的小车 - 副本\CCD2\PRJ\template.uvprojx
+Project File Date:  09/19/2016
+
+<h2>Output:</h2>
+Build target 'Template'
+compiling main.c...
+compiling ccd.c...
+..\SRC\HARDWARE\CCD\ccd.c(285): error:  #20: identifier "Center" is undefined
+        for(i = Center;i < 128;i++)
+..\SRC\HARDWARE\CCD\ccd.c(289): error:  #20: identifier "Right" is undefined
+                        Right = i;
+..\SRC\HARDWARE\CCD\ccd.c(297): error:  #20: identifier "Left" is undefined
+                        Left = i;
+..\SRC\HARDWARE\CCD\ccd.c(302): error:  #20: identifier "Left" is undefined
+        Center = (Left + Right) / 2;
+..\SRC\HARDWARE\CCD\ccd.c(302): error:  #20: identifier "Right" is undefined
+        Center = (Left + Right) / 2;
+..\SRC\HARDWARE\CCD\ccd.c(309): error:  #20: identifier "a5" is undefined
+                if(63 - Center >40)                                                                                             FTMDuty = 4700 + (63 - Center) * a5;
+..\SRC\HARDWARE\CCD\ccd.c(320): error:  #20: identifier "a5" is undefined
+                if (Center - 64 >40)                                                                                     FTMDuty = 4700 - (Center - 64) * a5;
+..\SRC\HARDWARE\CCD\ccd.c(341): error:  #20: identifier "Center" is undefined
+                OLED_Set_XY(Center,m);
+..\SRC\HARDWARE\CCD\ccd.c(346): error:  #20: identifier "Center" is undefined
+                OLED_Set_XY(Center,m);
+..\SRC\HARDWARE\CCD\ccd.c(349): error:  #20: identifier "Center" is undefined
+        OLED_Write_Num3(0,2,Center);
+..\SRC\HARDWARE\CCD\ccd.c: 0 warnings, 10 errors
+compiling data_sent.c...
+..\SRC\HARDWARE\DATA_SENT\data_sent.c(2032): error:  #20: identifier "Left" is undefined
+        Send_Data[197] = Left;
+..\SRC\HARDWARE\DATA_SENT\data_sent.c(2033): error:  #20: identifier "Right" is undefined
+        Send_Data[198] = Right;
+..\SRC\HARDWARE\DATA_SENT\data_sent.c(2034): error:  #20: identifier "Center" is undefined
+        Send_Data[199] = Center;
+..\SRC\HARDWARE\DATA_SENT\data_sent.c: 0 warnings, 3 errors
+compiling menu.c...
+..\SRC\HARDWARE\MENU\menu.c(13): warning:  #940-D: missing return statement at end of non-void function "yiwei"
+  }
+..\SRC\HARDWARE\MENU\menu.c(31): error:  #20: identifier "a5" is undefined
+        OLED_Write_Num2(7,yiwei(8,i),a5);
+..\SRC\HARDWARE\MENU\menu.c(224): error:  #20: identifier "SD_Flag" is undefined
+                                SD_Flag = 1;
+..\SRC\HARDWARE\MENU\menu.c(235): error:  #20: identifier "CCD_Flag" is undefined
+                        CCD_Flag = 1;
+..\SRC\HARDWARE\MENU\menu.c(247): error:  #20: identifier "Run_Flag" is undefined
+                        Run_Flag = 1;
+..\SRC\HARDWARE\MENU\menu.c(262): error:  #20: identifier "CCD_Flag" is undefined
+                        CCD_Flag = 0;
+..\SRC\HARDWARE\MENU\menu.c: 1 warning, 5 errors
+"..\OBJ\template.axf" - 18 Error(s), 1 Warning(s).
+Target not created.
+</pre>
+</body>
+</html>

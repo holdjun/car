@@ -1,0 +1,15 @@
+..\obj\menu.o: ..\SCR\HARDWARE\menu\menu.c
+..\obj\menu.o: ..\SCR\HARDWARE\menu\menu.h
+..\obj\menu.o: ..\SCR\FWLIB\SYS\sys.h
+..\obj\menu.o: ..\SCR\STARTUP\MK60DZ10.h
+..\obj\menu.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h
+..\obj\menu.o: F:\apps\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\menu.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h
+..\obj\menu.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
+..\obj\menu.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h
+..\obj\menu.o: ..\SCR\STARTUP\system_MK60DZ10.h
+..\obj\menu.o: ..\SCR\FWLIB\oled\oled.h
+..\obj\menu.o: ..\SCR\FWLIB\GPIO\gpio.h
+..\obj\menu.o: ..\SCR\FWLIB\DELAY\delay.h
+..\obj\menu.o: F:\apps\keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\menu.o: ..\SCR\USER\Mydefine.h

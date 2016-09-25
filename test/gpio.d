@@ -1,0 +1,10 @@
+..\gpio.o: ..\SCR\FWLIB\GPIO\gpio.c
+..\gpio.o: ..\SCR\FWLIB\GPIO\gpio.h
+..\gpio.o: ..\SCR\FWLIB\SYS\sys.h
+..\gpio.o: ..\SCR\STARTUP\MK60DZ10.h
+..\gpio.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h
+..\gpio.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\gpio.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h
+..\gpio.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
+..\gpio.o: d:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h
+..\gpio.o: ..\SCR\STARTUP\system_MK60DZ10.h

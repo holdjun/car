@@ -1,0 +1,10 @@
+..\obj\ftm.o: ..\SCR\FWLIB\FTM\ftm.c
+..\obj\ftm.o: ..\SCR\FWLIB\FTM\ftm.h
+..\obj\ftm.o: ..\SCR\FWLIB\SYS\sys.h
+..\obj\ftm.o: ..\SCR\STARTUP\MK60DZ10.h
+..\obj\ftm.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h
+..\obj\ftm.o: F:\apps\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\ftm.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h
+..\obj\ftm.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
+..\obj\ftm.o: F:\apps\keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h
+..\obj\ftm.o: ..\SCR\STARTUP\system_MK60DZ10.h
