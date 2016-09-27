@@ -85,6 +85,8 @@ int main(void)
 				TIME1flag_20ms=0;
 				ImageCapture(Pixel);
 				Sd_X();
+				Sd_D();
+				UART_Send_Con();
 				erzhi();
 				LB();
 				oled_collect();

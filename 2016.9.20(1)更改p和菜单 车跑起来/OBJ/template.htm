@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\OBJ\template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\OBJ\template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Thu Sep 22 09:38:10 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Mon Sep 26 18:38:04 2016
 <BR><P>
 <H3>Maximum Stack Usage =        172 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -636,30 +636,30 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[82]"></a>main</STRONG> (Thumb, 234 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[82]"></a>main</STRONG> (Thumb, 242 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 172<LI>Call Chain = main &rArr; chuinit_Init &rArr; FTM_Init &rArr; FTM_PWM_ChangeDuty &rArr; assert_failed &rArr; UART_printf &rArr; printn &rArr;  printn (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_collect
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;erzhi
+<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_collect
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;erzhi
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chuinit_Init
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Send_Con
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Send_Con
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockSetup
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sd_X
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sd_Init
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sd_D
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ZhongXian
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sd_D
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ZhongXian
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit2
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit1
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit2
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit1
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Init
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LB
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LB
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ImageCapture
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DelayInit
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Data_Uart_Init
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DataInit
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CCD_HeiXian
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CCD_HeiXian
 </UL>
 <BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
@@ -669,10 +669,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_DMACmd
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetITStatus
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_ITConfig
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Init
+<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Init
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMACmd
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SendDataInt
 <LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_GetITStatus
@@ -709,7 +706,10 @@ Global Symbols
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT_ClearITPendingBit
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClockSetup
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_DMACmd
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetITStatus
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_ITConfig
 </UL>
 
 <P><STRONG><a name="[51]"></a>PIT0_IRQHandler</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, isr.o(.text))
@@ -740,7 +740,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Write_String
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mk60dz10.o(RESET)
 </UL>
@@ -750,7 +750,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Write_String
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mk60dz10.o(RESET)
 </UL>
@@ -758,7 +758,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = MemManage_Handler &rArr; FTM_PWM_ChangeDuty &rArr; assert_failed &rArr; UART_printf &rArr; printn &rArr;  printn (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mk60dz10.o(RESET)
 </UL>
@@ -766,7 +766,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = BusFault_Handler &rArr; FTM_PWM_ChangeDuty &rArr; assert_failed &rArr; UART_printf &rArr; printn &rArr;  printn (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mk60dz10.o(RESET)
 </UL>
@@ -774,7 +774,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = UsageFault_Handler &rArr; FTM_PWM_ChangeDuty &rArr; assert_failed &rArr; UART_printf &rArr; printn &rArr;  printn (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_mk60dz10.o(RESET)
 </UL>
@@ -829,8 +829,8 @@ Global Symbols
 <P><STRONG><a name="[e3]"></a>DelayMs</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, delay.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DelayMs
 </UL>
-<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit2
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit1
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit2
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit1
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Init
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ENET_Init
 </UL>
@@ -859,7 +859,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;assert_failed
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Send_Con
+<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Send_Con
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Data_UpLoad
 </UL>
 
@@ -877,7 +877,7 @@ Global Symbols
 
 <P><STRONG><a name="[130]"></a>DMA_ClearITPendingBit</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, dma.o(.text), UNUSED)
 
-<P><STRONG><a name="[99]"></a>FTM_PWM_ChangeDuty</STRONG> (Thumb, 292 bytes, Stack size 32 bytes, ftm.o(.text))
+<P><STRONG><a name="[9b]"></a>FTM_PWM_ChangeDuty</STRONG> (Thumb, 292 bytes, Stack size 32 bytes, ftm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = FTM_PWM_ChangeDuty &rArr; assert_failed &rArr; UART_printf &rArr; printn &rArr;  printn (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;assert_failed
@@ -888,9 +888,9 @@ Global Symbols
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MemManage_Handler
 <LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMI_Handler
 <LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit2
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit1
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CCD_HeiXian
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit2
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit1
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CCD_HeiXian
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -898,7 +898,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = FTM_Init &rArr; FTM_PWM_ChangeDuty &rArr; assert_failed &rArr; UART_printf &rArr; printn &rArr;  printn (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_SetMode
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;assert_failed
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chuinit_Init
@@ -1002,8 +1002,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;assert_failed
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chuinit_Init
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit2
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit1
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit2
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit1
 </UL>
 
 <P><STRONG><a name="[c2]"></a>PIT_ITConfig</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, pit.o(.text))
@@ -1176,7 +1176,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_SendCommand
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sd_D
+<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sd_D
 </UL>
 
 <P><STRONG><a name="[da]"></a>SD_WriteSingleBlock</STRONG> (Thumb, 138 bytes, Stack size 56 bytes, sd.o(.text))
@@ -1261,8 +1261,8 @@ Global Symbols
 </UL>
 <P><STRONG><a name="[ec]"></a>OLED_WrDat</STRONG> (Thumb, 114 bytes, Stack size 0 bytes, oled.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ZhongXian
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ZhongXian
 <LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Write_Char
 </UL>
 
@@ -1277,8 +1277,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_WrCmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ZhongXian
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;oled_show
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ZhongXian
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
 <LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Write_Char
 </UL>
@@ -1292,8 +1292,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NMI_Handler
 <LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HardFault_Handler
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Init
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit2
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit1
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit2
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Quit1
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Init
 </UL>
 
@@ -1350,7 +1350,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Write_Char
 </UL>
-<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CCD_HeiXian
+<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CCD_HeiXian
 </UL>
 
 <P><STRONG><a name="[f1]"></a>OLED_Write_Num4</STRONG> (Thumb, 138 bytes, Stack size 20 bytes, oled.o(.text))
@@ -1359,7 +1359,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Write_Char
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Menu_Init
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CCD_HeiXian
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CCD_HeiXian
 </UL>
 
 <P><STRONG><a name="[f2]"></a>OLED_Write_Num5</STRONG> (Thumb, 150 bytes, Stack size 20 bytes, oled.o(.text), UNUSED)
@@ -1390,9 +1390,9 @@ Global Symbols
 <P><STRONG><a name="[90]"></a>ImageCapture</STRONG> (Thumb, 148 bytes, Stack size 16 bytes, ccd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = ImageCapture &rArr; ADC_GetConversionValue
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetConversionValue
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DelayUs
+<BR>[Calls]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DelayUs
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DelayNs
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetConversionValue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1401,13 +1401,13 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PixelAverage
 </UL>
 
-<P><STRONG><a name="[94]"></a>oled_collect</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, ccd.o(.text))
+<P><STRONG><a name="[96]"></a>oled_collect</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, ccd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = oled_collect
 </UL>
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[95]"></a>oled_show</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, ccd.o(.text))
+<P><STRONG><a name="[97]"></a>oled_show</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, ccd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = oled_show &rArr; OLED_Set_XY
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Set_XY
@@ -1419,10 +1419,10 @@ Global Symbols
 <P><STRONG><a name="[fa]"></a>DT</STRONG> (Thumb, 74 bytes, Stack size 12 bytes, ccd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = DT
 </UL>
-<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;erzhi
+<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;erzhi
 </UL>
 
-<P><STRONG><a name="[92]"></a>erzhi</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, ccd.o(.text))
+<P><STRONG><a name="[94]"></a>erzhi</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, ccd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = erzhi &rArr; DT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DT
@@ -1430,21 +1430,21 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[93]"></a>LB</STRONG> (Thumb, 220 bytes, Stack size 0 bytes, ccd.o(.text))
+<P><STRONG><a name="[95]"></a>LB</STRONG> (Thumb, 220 bytes, Stack size 0 bytes, ccd.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[96]"></a>CCD_HeiXian</STRONG> (Thumb, 658 bytes, Stack size 8 bytes, ccd.o(.text))
+<P><STRONG><a name="[98]"></a>CCD_HeiXian</STRONG> (Thumb, 658 bytes, Stack size 8 bytes, ccd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = CCD_HeiXian &rArr; FTM_PWM_ChangeDuty &rArr; assert_failed &rArr; UART_printf &rArr; printn &rArr;  printn (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
+<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Write_Num4
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Write_Num3
 </UL>
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[97]"></a>OLED_ZhongXian</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, ccd.o(.text))
+<P><STRONG><a name="[99]"></a>OLED_ZhongXian</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, ccd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = OLED_ZhongXian &rArr; OLED_Set_XY
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Set_XY
@@ -1458,21 +1458,21 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Send_Con
+<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Send_Con
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NrfDataInit
 </UL>
 
 <P><STRONG><a name="[fe]"></a>Set_Uart_DMA_Enable</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, data_sent.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Send_Con
+<BR><BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Send_Con
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Data_UpLoad
 </UL>
 
 <P><STRONG><a name="[fd]"></a>Set_Uart_DMA_DAddr</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, data_sent.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Send_Con
+<BR><BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Send_Con
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Data_UpLoad
 </UL>
 
-<P><STRONG><a name="[9c]"></a>UART_Send_Con</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, data_sent.o(.text))
+<P><STRONG><a name="[93]"></a>UART_Send_Con</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, data_sent.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = UART_Send_Con &rArr; DMA_IsComplete &rArr; assert_failed &rArr; UART_printf &rArr; printn &rArr;  printn (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_IsComplete
@@ -1526,7 +1526,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[9b]"></a>Sd_D</STRONG> (Thumb, 138 bytes, Stack size 8 bytes, data_sent.o(.text))
+<P><STRONG><a name="[92]"></a>Sd_D</STRONG> (Thumb, 138 bytes, Stack size 8 bytes, data_sent.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = Sd_D &rArr; SD_ReadSingleBlock &rArr; SD_SendCommand
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_ReadSingleBlock
@@ -1553,24 +1553,24 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[9a]"></a>Menu_Quit1</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, menu.o(.text))
+<P><STRONG><a name="[9c]"></a>Menu_Quit1</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, menu.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = Menu_Quit1 &rArr; FTM_PWM_ChangeDuty &rArr; assert_failed &rArr; UART_printf &rArr; printn &rArr;  printn (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT_Stop
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DelayMs
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
 </UL>
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[98]"></a>Menu_Quit2</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, menu.o(.text))
+<P><STRONG><a name="[9a]"></a>Menu_Quit2</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, menu.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = Menu_Quit2 &rArr; FTM_PWM_ChangeDuty &rArr; assert_failed &rArr; UART_printf &rArr; printn &rArr;  printn (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT_Stop
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DelayMs
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_Clear
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
 </UL>
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
