@@ -88,8 +88,8 @@ int main(void)
 //				Sd_X();
 //				Sd_D();
 //				UART_Send_Con();
-				erzhi();
-				LB();
+//				erzhi();
+//				LB();
 				oled_collect();
 				oled_show();
 			}
@@ -129,8 +129,8 @@ int main(void)
 			{
 				TIME1flag_20ms=0;
 				ImageCapture(Pixel);
-				erzhi();
-				LB();
+//				erzhi();
+//				LB();
 //				Sd_X();
 			}
 			CCD_HeiXian();

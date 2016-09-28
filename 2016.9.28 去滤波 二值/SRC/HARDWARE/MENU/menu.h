@@ -13,7 +13,7 @@ struct Menu_Select
 };
 
 #if(Number_All >= 1)
-#define name0    	"AI"    
+#define name0    	"AI"
 #define name0_num   a1 
 #define name0_sub   1
 #endif 

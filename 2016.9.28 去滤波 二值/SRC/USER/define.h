@@ -8,7 +8,7 @@
 extern Data_Type *Sent_Data;
 extern uint8_t TIME1flag_20ms;
 extern uint16_t jiansuflag;
-
+extern unsigned char AverageValue;
 //extern int i,q;
 extern uint16_t FTMDuty;
 extern uint16_t FTMDuty_1;

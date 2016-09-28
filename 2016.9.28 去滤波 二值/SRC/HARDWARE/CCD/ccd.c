@@ -218,7 +218,7 @@ void oled_show()
 //void DT(void)
 //{
 //	uint8_t i,value_max = 0,value_min = 255,maxvalue;
-//	
+////	
 //	for(i = 10;i <= 120;i++) 
 //  {
 //    if(value_max <= Pixel[i]) 
@@ -230,58 +230,58 @@ void oled_show()
 //  }
 //	value_max = (Pixel[maxvalue] + Pixel[maxvalue + 1] + Pixel[maxvalue + 2] + Pixel[maxvalue - 1] + Pixel[maxvalue - 2]) / 5;
 //	if(value_min < 40) value_min = 40;
-//	AverageValue = (0.3 * value_max + 0.7 * value_min );
+//	AverageValue = (0.3 * value_max + 0.7 * value_min);
 //}
-void DT(void)
-{
-	uint8_t i,value_max,value_min;
-	extern unsigned char AverageValue;
-	value_max = Pixel[0];
-	for(i = 2;i < 126;i++) 
-  {
-    if(value_max <= Pixel[i]) value_max = Pixel[i];
-  }
-	value_min = Pixel[0];
-	for(i = 2;i < 126;i++) 
-  {
-    if(value_min >= Pixel[i]) value_min = Pixel[i];
-  }
-	AverageValue = (value_max+value_min) / 2 + 10;
-}
-/****************************二值化******************************/
-void erzhi(void)
-{
-	uint8_t i;
-	DT();
-	for(i = 0;i <= 128;i++)
-  {
-    if(Pixel[i] > AverageValue) Pixel[i] = 255;
-    else 												Pixel[i] = 0;
-  }
-}
-/*******************************滤波*************************/
-void LB(void)
-{
-  uint8_t i;
-  for(i = 1;i <= 127;i++)
-  {
-    if(Pixel[i] == 0 && Pixel[i] != Pixel[i-1] && Pixel[i] != Pixel[i+1]) 			 Pixel[i] = 255;
-    else if(Pixel[i] == 255 && Pixel[i] != Pixel[i-1] && Pixel[i] != Pixel[i+1]) Pixel[i] = 0;
-	}
-  for(i = 1;i <= 127;i++)
-  {
-    if(Pixel[i] == 0 && Pixel[i] == Pixel[i+1] && Pixel[i] != Pixel[i-1] && Pixel[i] != Pixel[i+2])
-    {
-      Pixel[i]   = 255;
-      Pixel[i+1] = 255;
-    }
-    if(Pixel[i] == 255 && Pixel[i] == Pixel[i+1] && Pixel[i] != Pixel[i-1] && Pixel[i] != Pixel[i+2])            
-    {
-      Pixel[i]   = 0;
-      Pixel[i+1] = 0;
-    }
-	}
-}
+//void DT(void)
+//{
+//	uint8_t i,value_max,value_min;
+//	
+//	value_max = Pixel[0];
+//	for(i = 2;i < 126;i++) 
+//  {
+//    if(value_max <= Pixel[i]) value_max = Pixel[i];
+//  }
+//	value_min = Pixel[0];
+//	for(i = 2;i < 126;i++) 
+//  {
+//    if(value_min >= Pixel[i]) value_min = Pixel[i];
+//  }
+//	AverageValue = (value_max+value_min) / 2 + 10;
+//}
+///****************************二值化******************************/
+//void erzhi(void)
+//{
+//	uint8_t i;
+//	DT();
+//	for(i = 0;i <= 128;i++)
+//  {
+//    if(Pixel[i] > AverageValue) Pixel[i] = 255;
+//    else 												Pixel[i] = 0;
+//  }
+//}
+///*******************************滤波*************************/
+//void LB(void)
+//{
+//  uint8_t i;
+//  for(i = 1;i <= 127;i++)
+//  {
+//    if(Pixel[i] == 0 && Pixel[i] != Pixel[i-1] && Pixel[i] != Pixel[i+1]) 			 Pixel[i] = 255;
+//    else if(Pixel[i] == 255 && Pixel[i] != Pixel[i-1] && Pixel[i] != Pixel[i+1]) Pixel[i] = 0;
+//	}
+//  for(i = 1;i <= 127;i++)
+//  {
+//    if(Pixel[i] == 0 && Pixel[i] == Pixel[i+1] && Pixel[i] != Pixel[i-1] && Pixel[i] != Pixel[i+2])
+//    {
+//      Pixel[i]   = 255;
+//      Pixel[i+1] = 255;
+//    }
+//    if(Pixel[i] == 255 && Pixel[i] == Pixel[i+1] && Pixel[i] != Pixel[i-1] && Pixel[i] != Pixel[i+2])            
+//    {
+//      Pixel[i]   = 0;
+//      Pixel[i+1] = 0;
+//    }
+//	}
+//}
 
 /*****************************
 *
@@ -294,16 +294,45 @@ void LB(void)
 *************************************************************************/
 void CCD_HeiXian(void)
 {
-	uint8_t i;
+	uint8_t i,value_max,value_min,maxvalue;
+	
+//	value_max = Pixel[0];
+//	for(i = 2;i < 126;i++) 
+//  {
+//    if(value_max <= Pixel[i]) value_max = Pixel[i];
+//  }
+//	value_min = Pixel[0];
+//	for(i = 2;i < 126;i++) 
+//  {
+//    if(value_min >= Pixel[i]) value_min = Pixel[i];
+//  }
+//	AverageValue = (value_max+value_min) / 2 + 20;
+	
+	
+	for(i = 10;i <= 120;i++)
+  {
+    if(value_max <= Pixel[i])
+		{
+			value_max = Pixel[i];
+			maxvalue = i;
+		}
+    if(value_min >= Pixel[i])	value_min = Pixel[i];
+  }
+	value_max = (Pixel[maxvalue] + Pixel[maxvalue + 1] + Pixel[maxvalue + 2] + Pixel[maxvalue - 1] + Pixel[maxvalue - 2]) / 5;
+	
+	if(value_min < 40) value_min = 40;
+	
+	AverageValue = (0.3 * value_max + 0.7 * value_min);
+
 	for(i = saoxian;i <= 122;i++)
 	{
 		Right = i;
-		if(Pixel[i] == 0) break;
+		if(Pixel[i - 2] - Pixel[i] >= 8 && Pixel[i - 3] - Pixel[i - 1] >= 8 && Pixel[i] <= AverageValue) break;
 	}
 	for(i = saoxian;i >= 6;i--)
 	{
 		Left = i;
-		if(Pixel[i] == 0) break;
+		if(Pixel[i + 2] - Pixel[i] >= 8 && Pixel[i + 3] - Pixel[i + 1] >= 8 && Pixel[i] <= AverageValue) break;
 	}
 	if (Left != 6 && Right != 122 && leixin == 0) Budao = (Right - Left) / 2;
 	
@@ -314,7 +343,7 @@ void CCD_HeiXian(void)
 				for (i = saoxian; i <= 122; i++)
 				{
 						Right = i;
-						if(Pixel[i] == 0) break;
+						if(Pixel[i - 4] - Pixel[i] >= 8 && Pixel[i - 5] - Pixel[i - 1] >= 8 && Pixel[i] <= AverageValue) break;
 				}
 				if(Right!= 122) Center = (Right + Left) / 2;
 				else
@@ -330,7 +359,7 @@ void CCD_HeiXian(void)
 				for (i = saoxian; i >= 6; i--)
 				{
 						Left = i;
-						if(Pixel[i] == 0) break;
+						if(Pixel[i + 4] - Pixel[i] >= 8 && Pixel[i + 5] - Pixel[i + 1] >= 8 && Pixel[i] <= AverageValue) break;
 				}
 				if(Left != 6) Center = (Right + Left ) / 2;
 				else
@@ -424,8 +453,8 @@ void CCD_HeiXian(void)
 		LeftLast = Left;
 		RightLast = Right;
 
-//		CenterLast[1] = CenterLast[0];
-//		CenterLast[0] = Center;
+		CenterLast[1] = CenterLast[0];
+		CenterLast[0] = Center;
 		
 		saoxian = Center;
 	
