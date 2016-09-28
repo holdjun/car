@@ -296,33 +296,32 @@ void CCD_HeiXian(void)
 {
 	uint8_t i,value_max,value_min,maxvalue;
 	
-//	value_max = Pixel[0];
-//	for(i = 2;i < 126;i++) 
-//  {
-//    if(value_max <= Pixel[i]) value_max = Pixel[i];
-//  }
-//	value_min = Pixel[0];
-//	for(i = 2;i < 126;i++) 
-//  {
-//    if(value_min >= Pixel[i]) value_min = Pixel[i];
-//  }
-//	AverageValue = (value_max+value_min) / 2 + 20;
-	
-	
-	for(i = 10;i <= 120;i++)
+	value_max = Pixel[0];
+	for(i = 2;i < 126;i++) 
   {
-    if(value_max <= Pixel[i])
-		{
-			value_max = Pixel[i];
-			maxvalue = i;
-		}
-    if(value_min >= Pixel[i])	value_min = Pixel[i];
+    if(value_max <= Pixel[i]) value_max = Pixel[i];
   }
-	value_max = (Pixel[maxvalue] + Pixel[maxvalue + 1] + Pixel[maxvalue + 2] + Pixel[maxvalue - 1] + Pixel[maxvalue - 2]) / 5;
+	value_min = Pixel[0];
+	for(i = 2;i < 126;i++) 
+  {
+    if(value_min >= Pixel[i]) value_min = Pixel[i];
+  }
+	AverageValue = (value_max+value_min) / 2 + 10;
 	
-	if(value_min < 40) value_min = 40;
-	
-	AverageValue = (0.3 * value_max + 0.7 * value_min);
+//	for(i = 2;i <= 126;i++)
+//  {
+//    if(value_max <= Pixel[i])
+//		{
+//			value_max = Pixel[i];
+//			maxvalue = i;
+//		}
+//    if(value_min >= Pixel[i])	value_min = Pixel[i];
+//  }
+//	value_max = (Pixel[maxvalue] + Pixel[maxvalue + 1] + Pixel[maxvalue + 2] + Pixel[maxvalue - 1] + Pixel[maxvalue - 2]) / 5;
+//	
+//	if(value_min < 40) value_min = 40;
+//	
+//	AverageValue = (0.3 * value_max + 0.7 * value_min);
 
 	for(i = saoxian;i <= 122;i++)
 	{
@@ -371,66 +370,59 @@ void CCD_HeiXian(void)
 		} 
 	
 	if (Left != 6 && Right != 122) Center = (Right + Left) / 2;
-
-/*	if (Left == 6 && Right == 122)
-//	{
-//		if (flag_black == 0) flag_miss = 1;
-//	}		
-//
-//	
-//	if (flag_miss == 1)
-//	{
-//			for(i = shaoxian;i <= 122;i++)
-//		{
-//			Right = i;
-//			if(Pixel[i] == 0)
-//			{
-//				flag_miss = 0;
-//				break;
-//			}
-//		}
-//		for(i = shaoxian;i >= 6;i--)
-//		{
-//			Left = i;
-//			if(Pixel[i] == 0)
-//			{
-//				flag_miss = 0;
-//				break;
-//			}
-//		}
-//		if (Left != 6 && Right == 122)
-//			{
-//						Center = Left + Budao;
-//						if (Center > 128) Center = 128;
-//						if (Center < (Right + Left) / 2) Center = (Right + Left) / 2;
-//			}
-
-//		if (Left == 6 && Right != 122)  
-//			{
-//						if (Right >= Budao) Center = Right - Budao;
-//						else Center = 0;
-//						if (Center > (Right + Left) / 2) Center = (Right + Left) / 2;
-//			}
-//			
-//		
-//		if (Left != 6 && Right != 122) Center = (Right + Left) / 2;
-//		
-//		if (Left == 6 && Right == 122)
-//			{
-//					flag_black = 1;
-//				  flag_miss = 0;
-//					if (CenterLast[0] < 64)  flag_miss_record = 1;//×ó×ª
-//					if (CenterLast[0] >= 64) flag_miss_record = 2;//ÓÒ×ª
-//			}
-//	}
-//		if(Left <= 12 && Right >= 120 && CenterLast[0] < 70 && CenterLast[0] > 55)
-//		{
-//			DelayNs();
-//			Center = 64;
-//		}	
-//		*/
-
 		
+/************************************************************************/
+		
+	if (Left == 6 && Right == 122)
+	{
+		if (flag_black == 0) flag_miss = 1;
+	}		
+	if (flag_miss == 1)
+	{
+			for(i = saoxian;i <= 122;i++)
+		{
+			Right = i;
+			if(Pixel[i - 8] - Pixel[i] >= 10 && Pixel[i - 9] - Pixel[i - 1] >= 10 && Pixel[i] <= AverageValue)
+			{
+				flag_miss = 0;
+				break;
+			}
+		}
+		for(i = saoxian;i >= 6;i--)
+		{
+			Left = i;
+			if(Pixel[i + 8] - Pixel[i] >= 10 && Pixel[i + 9] - Pixel[i + 1] >= 10 && Pixel[i] <= AverageValue)
+			{
+				flag_miss = 0;
+				break;
+			}
+		}
+		if (Left != 6 && Right == 122)
+			{
+						Center = Left + Budao;
+						if (Center > 128) Center = 128;
+						if (Center < (Right + Left) / 2) Center = (Right + Left) / 2;
+			}
+
+		if (Left == 6 && Right != 122)  
+			{
+						if (Right >= Budao) Center = Right - Budao;
+						else Center = 0;
+						if (Center > (Right + Left) / 2) Center = (Right + Left) / 2;
+			}
+		if (Left != 6 && Right != 122) Center = (Right + Left) / 2;
+		
+		if (Left == 6 && Right == 122)
+			{
+					flag_black = 1;
+				  flag_miss = 0;
+					if (CenterLast[0] <= 63) FTMDuty = 4910 - (63 - CenterLast[0])*(63 - CenterLast[0]) * a1 / 10;
+					if (CenterLast[0] >= 64) FTMDuty = 4910 + (CenterLast[0] - 64)*(CenterLast[0] - 64) * a1 / 10;
+			}
+	}
+	
+/*****************************************************************************/
+	
 	if (Right == Left)
 		{
 			Left = LeftLast;

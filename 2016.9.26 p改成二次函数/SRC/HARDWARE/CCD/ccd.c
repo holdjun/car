@@ -339,7 +339,7 @@ void CCD_HeiXian(void)
 					else Center = 0;
 					if (Center > (Right + Left) / 2) Center = (Right + Left) / 2;
 				}
-		} 
+		}
 	
 	if (Left != 6 && Right != 122) Center = (Right + Left) / 2;
 
@@ -409,23 +409,23 @@ void CCD_HeiXian(void)
 			Center = (Left + Right) / 2;
 		}
 	
-//	if (Center > 44 && Center <88 && CenterLast[0] > 44 && CenterLast[0] < 88 )
-//	{
-//		leixin = 0;//zhidao
-//	}
-//	
-//	if ((Center <= 44 && Left <= 13) || (Center >=84 && Right >= 115))
-//	{
-//		leixin = 1;//wandao
-//	}
+	if (Center > 44 && Center <88 && CenterLast[0] > 44 && CenterLast[0] < 88 )
+	{
+		leixin = 0;//zhidao
+	}
+	
+	if ((Center <= 44 && Left <= 13) || (Center >=84 && Right >= 115))
+	{
+		leixin = 1;//wandao
+	}
 	
 	/*********************************************************************/	
 
 		LeftLast = Left;
 		RightLast = Right;
 
-//		CenterLast[1] = CenterLast[0];
-//		CenterLast[0] = Center;
+		CenterLast[1] = CenterLast[0];
+		CenterLast[0] = Center;
 		
 		saoxian = Center;
 	

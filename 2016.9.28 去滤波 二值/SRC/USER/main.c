@@ -30,9 +30,9 @@
 #include "chuinit.h"
 #include "menu.h"
 
-uint16_t a1 = 10,a2 = 28,a3 = 25,a4 = 35,a5 = 40,a6 = 20,a7 = 10, a8 = 20,a9 = 50;
+uint16_t a1 = 6,a2 = 28,a3 = 25,a4 = 35,a5 = 40,a6 = 20,a7 = 10, a8 = 20,a9 = 50;
 uint16_t FTMDuty = 4910; 
-uint16_t FTMDuty_1 = 1900;
+uint16_t FTMDuty_1 = 1600;
 uint16_t FTMDuty_2 = 1300;
 
 uint16_t LeftLast;
@@ -88,8 +88,6 @@ int main(void)
 //				Sd_X();
 //				Sd_D();
 //				UART_Send_Con();
-//				erzhi();
-//				LB();
 				oled_collect();
 				oled_show();
 			}
@@ -120,6 +118,17 @@ int main(void)
 					FTM_PWM_ChangeDuty(FTM1_CH0_PB0,0);
 				}
 			}
+			if(Key_right == 0) //上位机
+			{
+				DelayMs(100);
+				if(Key_right == 0)
+				{
+					OLED_Clear();
+					Sd_D();
+					UART_Send_Con();
+					FTM_PWM_ChangeDuty(FTM1_CH0_PB0,0);
+				}
+			}
 		}
 		
 	//发车
@@ -131,7 +140,7 @@ int main(void)
 				ImageCapture(Pixel);
 //				erzhi();
 //				LB();
-//				Sd_X();
+				Sd_X();
 			}
 			CCD_HeiXian();
 //			if(leixin == 0) 
@@ -142,7 +151,7 @@ int main(void)
 //				if(jiansuflag > 4 && jiansuflag < a6) FTM_PWM_ChangeDuty(FTM1_CH0_PB0,FTMDuty_1);
 //				if(jiansuflag >= a6) jiansuflag = 0;
 //			}
-			if(Key_down == 0)//菜单
+			if(Key_down == 0) //菜单
 			{
 				DelayMs(100);
 				if(Key_down == 0)
@@ -154,11 +163,6 @@ int main(void)
 				}
 			}
 		}
-//			while(SD_Flag)
-//			{
-//				Sd_D();
-//				UART_Send_Con();
-//			}
 	}
 }
 

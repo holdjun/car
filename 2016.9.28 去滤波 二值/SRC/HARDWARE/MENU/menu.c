@@ -420,7 +420,6 @@ void anjian_menu(void)
 			{
 				OLED_Clear();
 				Flag = 1;
-				SD_X = 0;
 				PIT_Start(PIT1);
 			}
 		}

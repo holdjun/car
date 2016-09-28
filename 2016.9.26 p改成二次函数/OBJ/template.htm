@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\OBJ\template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\OBJ\template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Mon Sep 26 23:54:07 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Wed Sep 28 15:35:49 2016
 <BR><P>
 <H3>Maximum Stack Usage =        172 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -669,11 +669,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_printf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_DMACmd
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetITStatus
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_ITConfig
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Init
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMACmd
+<BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_DMACmd
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SendDataInt
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_GetITStatus
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_ITConfig
@@ -710,6 +706,10 @@ Global Symbols
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT_Stop
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT_Start
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_DMACmd
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetITStatus
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_ITConfig
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Init
 </UL>
 
 <P><STRONG><a name="[51]"></a>PIT0_IRQHandler</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, isr.o(.text))
@@ -1375,9 +1375,9 @@ Global Symbols
 <P><STRONG><a name="[90]"></a>ImageCapture</STRONG> (Thumb, 148 bytes, Stack size 16 bytes, ccd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = ImageCapture &rArr; ADC_GetConversionValue
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetConversionValue
-<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DelayUs
+<BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DelayUs
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DelayNs
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetConversionValue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1419,7 +1419,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[95]"></a>CCD_HeiXian</STRONG> (Thumb, 742 bytes, Stack size 8 bytes, ccd.o(.text))
+<P><STRONG><a name="[95]"></a>CCD_HeiXian</STRONG> (Thumb, 832 bytes, Stack size 8 bytes, ccd.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = CCD_HeiXian &rArr; FTM_PWM_ChangeDuty &rArr; assert_failed &rArr; UART_printf &rArr; printn &rArr;  printn (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_PWM_ChangeDuty
@@ -1528,12 +1528,12 @@ Global Symbols
 <P><STRONG><a name="[8c]"></a>chuinit_Init</STRONG> (Thumb, 386 bytes, Stack size 56 bytes, chuinit.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 172<LI>Call Chain = chuinit_Init &rArr; FTM_Init &rArr; FTM_PWM_ChangeDuty &rArr; assert_failed &rArr; UART_printf &rArr; printn &rArr;  printn (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Init
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT_ITConfig
+<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT_ITConfig
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT_Init
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FTM_Init
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PIT_Stop
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
