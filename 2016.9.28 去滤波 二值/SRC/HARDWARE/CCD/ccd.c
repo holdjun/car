@@ -344,7 +344,7 @@ void CCD_HeiXian(void)
 						Right = i;
 						if(Pixel[i - 4] - Pixel[i] >= 8 && Pixel[i - 5] - Pixel[i - 1] >= 8 && Pixel[i] <= AverageValue) break;
 				}
-				if(Right!= 122) Center = (Right + Left) / 2;
+				if(Right != 122) Center = (Right + Left) / 2;
 				else
 				{
 				  Center = Left + Budao;
