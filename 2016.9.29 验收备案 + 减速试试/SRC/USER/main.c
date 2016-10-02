@@ -30,9 +30,9 @@
 #include "chuinit.h"
 #include "menu.h"
 
-uint16_t a1 = 10,a2 = 10,a3 = 25,a4 = 35,a5 = 40,a6 = 20,a7 = 10, a8 = 20,a9 = 50;
+uint16_t a1 = 10,a2 = 10,a3 = 8,a4 = 35,a5 = 40,a6 = 20,a7 = 10, a8 = 20,a9 = 50;
 uint16_t FTMDuty = 4910; 
-uint16_t FTMDuty_1 = 1950;
+uint16_t FTMDuty_1 = 2100;
 uint16_t FTMDuty_2 = 1600;
 
 uint16_t LeftLast;
@@ -41,7 +41,7 @@ uint16_t CenterLast[5];
 uint16_t Center = 64;
 uint16_t RightLast;
 uint16_t Right;
-//uint8_t Width;//赛道宽度
+
 uint16_t Budao;
 uint16_t hang = 1;
 uint16_t leixin = 0;
@@ -78,7 +78,7 @@ int main(void)
 	while(1)
 	{
 		Menu_Init();
-		//ccd测试
+		//ccd??
 		while(Flag == 1)
 		{
 			if(TIME1flag_20ms == 1)
@@ -98,7 +98,7 @@ int main(void)
 			OLED_Write_Num3(4,0,Center);
 			OLED_Write_Num3(0,0,Left);
 			OLED_Write_Num3(9,0,Right);
-			if(Key_1 == 0) //发车
+			if(Key_1 == 0) //??
 			{
 				DelayMs(100);
 				if(Key_1 == 0)
@@ -109,7 +109,7 @@ int main(void)
 					PIT_Start(PIT1);
 				}
 			}
-			if(Key_down == 0) //菜单
+			if(Key_down == 0) //??
 			{
 				DelayMs(100);
 				if(Key_down == 0)
@@ -120,7 +120,7 @@ int main(void)
 					FTM_PWM_ChangeDuty(FTM1_CH0_PB0,0);
 				}
 			}
-			if(Key_right == 0) //上位机
+			if(Key_right == 0) //???
 			{
 				DelayMs(100);
 				if(Key_right == 0)
@@ -133,7 +133,7 @@ int main(void)
 			}
 		}
 		
-	//发车
+	//??
 		while(Flag == 2)
 		{
 			if(TIME1flag_20ms==1)
@@ -151,7 +151,7 @@ int main(void)
 				if(jiansuflag <= a3) 									FTM_PWM_ChangeDuty(FTM1_CH0_PB0,0);
 				if(jiansuflag >  a3) 									FTM_PWM_ChangeDuty(FTM1_CH0_PB0,FTMDuty_2);
 			}
-			if(Key_down == 0)//菜单 
+			if(Key_down == 0)//?? 
 			{
 				DelayMs(100);
 				if(Key_down == 0)

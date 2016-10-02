@@ -29,7 +29,7 @@ void PIT1_IRQHandler(void)
 	{
 		TimerCnt_20ms  = 0;
 		TIME1flag_20ms = 1;
-//		jiansuflag ++;
+		jiansuflag ++;
 	}
 }
 
