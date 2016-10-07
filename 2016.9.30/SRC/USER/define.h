@@ -21,7 +21,7 @@ extern uint8_t Send_Data[200];
 extern int16_t sendData[200];	
 
 extern uint16_t CenterLast[5];//记录过去五场中线位置
-extern uint16_t Center;//中线
+extern uint16_t Center;//中线  
 extern uint16_t LeftLast;//记录过去五场左线位置
 extern uint16_t Left;//左线
 extern uint16_t RightLast;//记录过去五场右线位置

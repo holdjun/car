@@ -30,10 +30,10 @@
 #include "chuinit.h"
 #include "menu.h"
 
-uint16_t a1 = 4,a2 = 4,a3 = 15,a4 = 114,a5 = 2,a6 = 4,a7 = 10, a8 = 20,a9 = 50;
+uint16_t a1 = 3,a2 = 3,a3 = 15,a4 = 115,a5 = 3,a6 = 5,a7 = 10, a8 = 20,a9 = 50;
 uint16_t FTMDuty = 4896; 
 uint16_t FTMDuty_1 = 1950;
-uint16_t FTMDuty_2 = 1700;
+uint16_t FTMDuty_2 = 1750;
 
 uint16_t LeftLast;
 uint16_t Left;
@@ -147,8 +147,6 @@ int main(void)
 			{
 				TIME1flag_20ms=0;
 				ImageCapture(Pixel);
-//				erzhi();
-//				LB();
 				Sd_X();
 			}
 			CCD_HeiXian();

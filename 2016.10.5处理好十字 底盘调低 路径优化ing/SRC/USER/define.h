@@ -30,7 +30,7 @@ extern uint16_t Right;//”“œﬂ
 extern uint16_t Budao;
 extern uint16_t hang;
 extern uint16_t leixin;
-extern uint16_t leixin_last;
+extern uint16_t leixin_last[5];
 extern uint16_t saoxian;
 extern uint8_t flag_black;
 extern uint8_t flag_miss;

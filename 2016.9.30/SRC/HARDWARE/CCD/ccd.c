@@ -214,74 +214,6 @@ void oled_show()
 	  for(j = 0;j <= 127;j++) OLED_WrDat(oled_data[i][j]);
 	}
 }
-/****************************动态确定阈值******************************/
-//void DT(void)
-//{
-//	uint8_t i,value_max = 0,value_min = 255,maxvalue;
-////	
-//	for(i = 10;i <= 120;i++) 
-//  {
-//    if(value_max <= Pixel[i]) 
-//		{
-//			value_max = Pixel[i];
-//			maxvalue = i;
-//		}
-//    if(value_min >= Pixel[i])	value_min = Pixel[i];
-//  }
-//	value_max = (Pixel[maxvalue] + Pixel[maxvalue + 1] + Pixel[maxvalue + 2] + Pixel[maxvalue - 1] + Pixel[maxvalue - 2]) / 5;
-//	if(value_min < 40) value_min = 40;
-//	AverageValue = (0.3 * value_max + 0.7 * value_min);
-//}
-//void DT(void)
-//{
-//	uint8_t i,value_max,value_min;
-//	
-//	value_max = Pixel[0];
-//	for(i = 2;i < 126;i++) 
-//  {
-//    if(value_max <= Pixel[i]) value_max = Pixel[i];
-//  }
-//	value_min = Pixel[0];
-//	for(i = 2;i < 126;i++) 
-//  {
-//    if(value_min >= Pixel[i]) value_min = Pixel[i];
-//  }
-//	AverageValue = (value_max+value_min) / 2 + 10;
-//}
-///****************************二值化******************************/
-//void erzhi(void)
-//{
-//	uint8_t i;
-//	DT();
-//	for(i = 0;i <= 128;i++)
-//  {
-//    if(Pixel[i] > AverageValue) Pixel[i] = 255;
-//    else 												Pixel[i] = 0;
-//  }
-//}
-///*******************************滤波*************************/
-//void LB(void)
-//{
-//  uint8_t i;
-//  for(i = 1;i <= 127;i++)
-//  {
-//    if(Pixel[i] == 0 && Pixel[i] != Pixel[i-1] && Pixel[i] != Pixel[i+1]) 			 Pixel[i] = 255;
-//    else if(Pixel[i] == 255 && Pixel[i] != Pixel[i-1] && Pixel[i] != Pixel[i+1]) Pixel[i] = 0;
-//	}
-//  for(i = 1;i <= 127;i++)
-//  {
-//    if(Pixel[i] == 0 && Pixel[i] == Pixel[i+1] && Pixel[i] != Pixel[i-1] && Pixel[i] != Pixel[i+2])
-//    {
-//      Pixel[i]   = 255;
-//      Pixel[i+1] = 255;
-//    }
-//    if(Pixel[i] == 255 && Pixel[i] == Pixel[i+1] && Pixel[i] != Pixel[i-1] && Pixel[i] != Pixel[i+2])            
-//    {
-//      Pixel[i]   = 0;
-//      Pixel[i+1] = 0;
-//    }
-//	}
-//}
 
 /*****************************
 *
@@ -356,15 +288,16 @@ void CCD_HeiXian(void)
 	
 	if (Left != 6 && Right != 122) Center = (Right + Left) / 2;
 	
-	/*************************heixian*****************************************/
+	/*************************heixianchuli*****************************************/
 	
-	if (Left == 6 && Right == 122 && AverageValue <= 85)
+	if (Left == 6 && Right == 122 && AverageValue <= 90)
 	{
 		if (CenterLast[0] <= 63) Center = 10;
 		if (CenterLast[0] >  63) Center = 110;
+		leixin = 1;
 	}
 	
-	/***************************shizhi*********************************************/
+	/***************************shizhichuli*********************************************/
 
 	if (AverageValue >= a4 && Left <= 8 && Right >= 120 && Cross_flag_wan == 1 && AverageValue <= 200)
 	{

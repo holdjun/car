@@ -26,14 +26,14 @@
 #include "oled.h"
 #include "ccd.h"
 #include "data_sent.h"
-#include "define.h"
+#include "define.h"	
 #include "chuinit.h"
 #include "menu.h"
 
-uint16_t a1 = 4,a2 = 4,a3 = 15,a4 = 114,a5 = 2,a6 = 4,a7 = 10, a8 = 20,a9 = 50;
+uint16_t a1 = 3,a2 = 3,a3 = 16,a4 = 90,a5 = 1,a6 = 4,a7 = 10, a8 = 20,a9 = 50;
 uint16_t FTMDuty = 4896; 
-uint16_t FTMDuty_1 = 1950;
-uint16_t FTMDuty_2 = 1700;
+uint16_t FTMDuty_1 = 1900;
+uint16_t FTMDuty_2 = 1750;
 
 uint16_t LeftLast;
 uint16_t Left;
@@ -45,7 +45,7 @@ uint16_t Right;
 uint16_t Budao;
 uint16_t hang = 1;
 uint16_t leixin = 0;
-uint16_t leixin_last = 0;
+uint16_t leixin_last[5];
 uint16_t saoxian = 64;
 uint8_t flag_black = 0;
 uint8_t flag_miss = 0;
@@ -99,9 +99,7 @@ int main(void)
 			OLED_Write_Num3(4,0,Center);
 			OLED_Write_Num3(0,0,Left);
 			OLED_Write_Num3(9,0,Right);
-			OLED_Write_Num3(10,2,Cross_flag);
-			OLED_Write_Num3(6,2,Cross_flag_wan);
-			OLED_Write_Num3(2,2,AverageValue);
+
 			if(Key_1 == 0) //·¢³µ
 			{
 				DelayMs(100);
@@ -147,14 +145,12 @@ int main(void)
 			{
 				TIME1flag_20ms=0;
 				ImageCapture(Pixel);
-//				erzhi();
-//				LB();
 				Sd_X();
 			}
 			CCD_HeiXian();
 			if(leixin == 0)
 			{
-				if (jiasuflag <= a5) FTM_PWM_ChangeDuty(FTM1_CH0_PB0,5000);
+				if (jiasuflag <= a5) FTM_PWM_ChangeDuty(FTM1_CH0_PB0,4000);
 				else 								 FTM_PWM_ChangeDuty(FTM1_CH0_PB0,FTMDuty_1);
 			}
 			if(leixin == 1) 
