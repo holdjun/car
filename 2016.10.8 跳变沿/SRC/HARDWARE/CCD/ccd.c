@@ -379,17 +379,17 @@ void CCD_HeiXian(void)
 		leixin = 0;//zhidao 
 		jiansuflag = 0;
 	}
+	else zhidaoflag = 0;
 	
 	if ((Center <= 44 && Left <= 13) || (Center >=84 && Right >= 115))
 	{
 		leixin = 1;//wandao
 		jiasuflag = 0;
-//		zhidaoflag = 0;
 	}
-//	if (leixin == 0)
-//	{
-//		zhidaoflag_save = zhidaoflag;
-//	}
+	if (leixin == 0)
+	{
+		zhidaoflag_save = zhidaoflag;
+	}
 	/****************************************************************************/
 	
 	CenterLast[1] = CenterLast[0];

@@ -35,6 +35,8 @@ extern Data_Type *Sent_Data;
 uint16_t FTMDuty = 4896; 
 uint16_t FTMDuty_1 = 2100;
 uint16_t FTMDuty_2 = 1750;
+uint16_t FTMDuty_3 = 200;
+uint16_t FTMDuty_4 = 0;
 
 uint16_t CenterLast[5];
 uint16_t Center = 64;
@@ -68,6 +70,7 @@ uint16_t jiasu_Num = 2;
 
 uint16_t zhidaoflag = 0;
 uint16_t zhidaoflag_save = 0;
+uint16_t zhidao_Num = 150;
 
 uint8_t P1[128];
 uint8_t oled_data[8][128];
@@ -179,15 +182,16 @@ int main(void)
 			}
 			if(leixin == 1) 
 			{
-				if (jiansuflag <= jiansu_Num)
+				if (zhidaoflag_save < zhidao_Num && jiansuflag <= jiansu_Num)
 				{
 					FTM_PWM_ChangeDuty(FTM1_CH0_PB0,0);
-					FTM_PWM_ChangeDuty(FTM1_CH1_PB1,100);
+					FTM_PWM_ChangeDuty(FTM1_CH1_PB1,FTMDuty_3);
 				}
-//				else if(zhidaoflag_save < 200 && jiansuflag <= a6)
-//				{
-//					FTM_PWM_ChangeDuty(FTM1_CH0_PB0,0);
-//				}
+				else if(jiansuflag <= jiansu_Num)
+				{
+					FTM_PWM_ChangeDuty(FTM1_CH0_PB0,0);
+					FTM_PWM_ChangeDuty(FTM1_CH1_PB1,FTMDuty_4);
+				}
 				else FTM_PWM_ChangeDuty(FTM1_CH0_PB0,FTMDuty_2);
 			}
 			if(Key_down == 0) //²Ëµ¥

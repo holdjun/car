@@ -1,0 +1,10 @@
+..\obj\i2c.o: ..\SRC\FWLIB\I2C\i2c.c
+..\obj\i2c.o: ..\SRC\FWLIB\I2C\i2c.h
+..\obj\i2c.o: ..\SRC\FWLIB\SYS\sys.h
+..\obj\i2c.o: ..\SRC\STARTUP\MK60DZ10.h
+..\obj\i2c.o: F:\apps\keil\ARM\CMSIS\Include\core_cm4.h
+..\obj\i2c.o: F:\apps\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\i2c.o: F:\apps\keil\ARM\CMSIS\Include\core_cmInstr.h
+..\obj\i2c.o: F:\apps\keil\ARM\CMSIS\Include\core_cmFunc.h
+..\obj\i2c.o: F:\apps\keil\ARM\CMSIS\Include\core_cm4_simd.h
+..\obj\i2c.o: ..\SRC\STARTUP\system_MK60DZ10.h

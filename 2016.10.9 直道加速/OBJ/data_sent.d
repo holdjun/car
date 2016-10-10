@@ -1,0 +1,17 @@
+..\obj\data_sent.o: ..\SRC\HARDWARE\DATA_SENT\data_sent.c
+..\obj\data_sent.o: ..\SRC\HARDWARE\DATA_SENT\data_sent.h
+..\obj\data_sent.o: ..\SRC\FWLIB\UART\uart.h
+..\obj\data_sent.o: ..\SRC\FWLIB\SYS\sys.h
+..\obj\data_sent.o: ..\SRC\STARTUP\MK60DZ10.h
+..\obj\data_sent.o: F:\apps\keil\ARM\CMSIS\Include\core_cm4.h
+..\obj\data_sent.o: F:\apps\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\data_sent.o: F:\apps\keil\ARM\CMSIS\Include\core_cmInstr.h
+..\obj\data_sent.o: F:\apps\keil\ARM\CMSIS\Include\core_cmFunc.h
+..\obj\data_sent.o: F:\apps\keil\ARM\CMSIS\Include\core_cm4_simd.h
+..\obj\data_sent.o: ..\SRC\STARTUP\system_MK60DZ10.h
+..\obj\data_sent.o: ..\SRC\HARDWARE\oled\oled.h
+..\obj\data_sent.o: ..\SRC\FWLIB\DMA\dma.h
+..\obj\data_sent.o: ..\SRC\FWLIB\GPIO\gpio.h
+..\obj\data_sent.o: ..\SRC\USER\define.h
+..\obj\data_sent.o: ..\SRC\HARDWARE\DATA_SENT\data_sent.h
+..\obj\data_sent.o: ..\SRC\FWLIB\SD\sd.h
