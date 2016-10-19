@@ -237,7 +237,7 @@ void CCD_HeiXian(void)
   {
     if (value_min >= P1[i]) value_min = P1[i];
   }
-	AverageValue = (value_max + value_min * 2) / 3;
+	AverageValue = (value_max + value_min) / 2 - 4;
 
 	for (i = saoxian;i <= 122;i++)
 	{
