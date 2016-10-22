@@ -192,12 +192,12 @@ int main(void)
 //					FTM_PWM_ChangeDuty(FTM1_CH0_PB0,0);
 //					FTM_PWM_ChangeDuty(FTM1_CH1_PB1,FTMDuty_3);
 //				}
-				if(jiansuflag <= 8)
+				if(jiansuflag <= 5)
 				{
 					FTM_PWM_ChangeDuty(FTM1_CH0_PB0,0);
 					FTM_PWM_ChangeDuty(FTM1_CH1_PB1,FTMDuty_4);
 				}
-				else FTM_PWM_ChangeDuty(FTM1_CH0_PB0,FTMDuty_2);
+				else FTM_PWM_ChangeDuty(FTM1_CH0_	PB0,FTMDuty_2);
 			}
 			if(Cross_flag == 1) FTM_PWM_ChangeDuty(FTM1_CH0_PB0,FTMDuty_2);
 			
