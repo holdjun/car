@@ -33,10 +33,10 @@
 extern Data_Type *Sent_Data;
 
 uint16_t FTMDuty = 4880; 
-uint16_t FTMDuty_1 = 2300;
+uint16_t FTMDuty_1 = 1900;
 uint16_t FTMDuty_2 = 1850;
 uint16_t FTMDuty_3 = 200;
-uint16_t FTMDuty_4 = 200;
+uint16_t FTMDuty_4 = 150;
 
 uint16_t CenterLast[5];
 uint16_t Center = 64;
@@ -48,8 +48,8 @@ uint16_t Left_last;
 uint16_t Budao;
 uint16_t Left_p1 = 27;
 uint16_t Right_p1 = 27;
-uint16_t Left_p2 = 25;
-uint16_t Right_p2 = 25;
+uint16_t Left_p2 = 27;
+uint16_t Right_p2 = 27;
 
 uint16_t hang = 1;
 uint16_t leixin = 0;
@@ -58,8 +58,8 @@ uint16_t leixin_last[5];
 uint8_t flag_black = 0;
 uint8_t flag_miss = 0;
 
-uint16_t black_Value = 85;
-uint16_t white_Value = 140;
+uint16_t black_Value = 79;
+uint16_t white_Value = 130;
 uint16_t Valuemax_flag = 0;
 uint16_t setValue = 135;
 
@@ -70,7 +70,7 @@ uint8_t Cross_flag_time = 0;
 uint16_t jiasuflag = 0;
 uint16_t jiansuflag = 0;
 uint16_t jiansu_Num = 2;
-uint16_t jiasu_Num = 3;
+uint16_t jiasu_Num = 4;
 
 uint16_t zhidaoflag = 0;
 uint16_t zhidaoflag_save = 0;
@@ -90,7 +90,7 @@ uint8_t TIME1flag_20ms = 0;
 
 int main(void)
 {
-
+	uint16_t a2 = 0;
 	SystemClockSetup(ClockSource_EX50M,CoreClock_100M);
 	DelayInit();
 	OLED_Init();
@@ -173,6 +173,11 @@ int main(void)
 	//·¢³µ
 		while(Flag == 2)
 		{
+			if (a2 <= 3)
+			{
+				FTM_PWM_ChangeDuty(FTM1_CH0_PB0,6000);
+				a2 ++;
+			}
 			if(TIME1flag_20ms == 1)
 			{
 				TIME1flag_20ms = 0;
@@ -192,12 +197,12 @@ int main(void)
 //					FTM_PWM_ChangeDuty(FTM1_CH0_PB0,0);
 //					FTM_PWM_ChangeDuty(FTM1_CH1_PB1,FTMDuty_3);
 //				}
-				if(jiansuflag <= 5)
+				if(jiansuflag <= 8)
 				{
 					FTM_PWM_ChangeDuty(FTM1_CH0_PB0,0);
 					FTM_PWM_ChangeDuty(FTM1_CH1_PB1,FTMDuty_4);
 				}
-				else FTM_PWM_ChangeDuty(FTM1_CH0_	PB0,FTMDuty_2);
+				else FTM_PWM_ChangeDuty(FTM1_CH0_PB0,FTMDuty_2);
 			}
 			if(Cross_flag == 1) FTM_PWM_ChangeDuty(FTM1_CH0_PB0,FTMDuty_2);
 			

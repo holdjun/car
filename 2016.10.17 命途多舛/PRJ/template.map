@@ -494,42 +494,42 @@ Image Symbol Table
     .text                                    0x000004b4   Section        0  system_mk60dz10.o(.text)
     .text                                    0x00000654   Section       60  startup_mk60dz10.o(.text)
     .text                                    0x00000690   Section        0  main.o(.text)
-    .text                                    0x00000940   Section        0  isr.o(.text)
-    .text                                    0x00000adc   Section        0  sys.o(.text)
-    .text                                    0x00001208   Section        0  delay.o(.text)
-    .text                                    0x000012e4   Section        0  dma.o(.text)
-    .text                                    0x00001658   Section        0  ftm.o(.text)
-    FTM_PWM_SetMode                          0x00001659   Thumb Code  1076  ftm.o(.text)
-    .text                                    0x000020a8   Section        0  gpio.o(.text)
-    .text                                    0x0000273c   Section        0  pit.o(.text)
-    .text                                    0x000029cc   Section        0  uart.o(.text)
-    UART_puts                                0x00003023   Thumb Code    26  uart.o(.text)
-    printn                                   0x0000303d   Thumb Code    48  uart.o(.text)
-    .text                                    0x00003480   Section        0  adc.o(.text)
-    ADC_Cal                                  0x00003481   Thumb Code   172  adc.o(.text)
-    .text                                    0x00003948   Section        0  sd.o(.text)
-    .text                                    0x00004160   Section        0  enet.o(.text)
-    ENET_BDInit                              0x00004161   Thumb Code   176  enet.o(.text)
-    NVIC_EnableIRQ                           0x0000483b   Thumb Code    22  enet.o(.text)
-    .text                                    0x00004894   Section        0  oled.o(.text)
-    .text                                    0x00004dc4   Section        0  ccd.o(.text)
-    .text                                    0x00005910   Section        0  data_sent.o(.text)
-    .text                                    0x00005ca0   Section        0  menu.o(.text)
-    .text                                    0x000060b4   Section        0  chuinit.o(.text)
-    .text                                    0x00006250   Section        0  strcpy.o(.text)
-    .text                                    0x00006298   Section      138  rt_memcpy_v6.o(.text)
-    .text                                    0x00006322   Section        0  heapauxi.o(.text)
-    .text                                    0x00006328   Section      100  rt_memcpy_w.o(.text)
-    .text                                    0x0000638c   Section       74  sys_stackheap_outer.o(.text)
-    .text                                    0x000063d6   Section        0  exit.o(.text)
-    .text                                    0x000063e4   Section        8  libspace.o(.text)
-    .text                                    0x000063ec   Section        0  sys_exit.o(.text)
-    .text                                    0x000063f8   Section        2  use_no_semi.o(.text)
-    .text                                    0x000063fa   Section        0  indicate_semi.o(.text)
-    x$fpl$ffltu                              0x000063fc   Section       38  fflt_clz.o(x$fpl$ffltu)
-    .constdata                               0x00006422   Section     1152  oled.o(.constdata)
-    x$fpl$usenofp                            0x00006422   Section        0  usenofp.o(x$fpl$usenofp)
-    .conststring                             0x000068a4   Section       17  uart.o(.conststring)
+    .text                                    0x00000954   Section        0  isr.o(.text)
+    .text                                    0x00000af0   Section        0  sys.o(.text)
+    .text                                    0x0000121c   Section        0  delay.o(.text)
+    .text                                    0x000012f8   Section        0  dma.o(.text)
+    .text                                    0x0000166c   Section        0  ftm.o(.text)
+    FTM_PWM_SetMode                          0x0000166d   Thumb Code  1076  ftm.o(.text)
+    .text                                    0x000020bc   Section        0  gpio.o(.text)
+    .text                                    0x00002750   Section        0  pit.o(.text)
+    .text                                    0x000029e0   Section        0  uart.o(.text)
+    UART_puts                                0x00003037   Thumb Code    26  uart.o(.text)
+    printn                                   0x00003051   Thumb Code    48  uart.o(.text)
+    .text                                    0x00003494   Section        0  adc.o(.text)
+    ADC_Cal                                  0x00003495   Thumb Code   172  adc.o(.text)
+    .text                                    0x0000395c   Section        0  sd.o(.text)
+    .text                                    0x00004174   Section        0  enet.o(.text)
+    ENET_BDInit                              0x00004175   Thumb Code   176  enet.o(.text)
+    NVIC_EnableIRQ                           0x0000484f   Thumb Code    22  enet.o(.text)
+    .text                                    0x000048a8   Section        0  oled.o(.text)
+    .text                                    0x00004dd8   Section        0  ccd.o(.text)
+    .text                                    0x00005968   Section        0  data_sent.o(.text)
+    .text                                    0x00005cf8   Section        0  menu.o(.text)
+    .text                                    0x0000610c   Section        0  chuinit.o(.text)
+    .text                                    0x000062a8   Section        0  strcpy.o(.text)
+    .text                                    0x000062f0   Section      138  rt_memcpy_v6.o(.text)
+    .text                                    0x0000637a   Section        0  heapauxi.o(.text)
+    .text                                    0x00006380   Section      100  rt_memcpy_w.o(.text)
+    .text                                    0x000063e4   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x0000642e   Section        0  exit.o(.text)
+    .text                                    0x0000643c   Section        8  libspace.o(.text)
+    .text                                    0x00006444   Section        0  sys_exit.o(.text)
+    .text                                    0x00006450   Section        2  use_no_semi.o(.text)
+    .text                                    0x00006452   Section        0  indicate_semi.o(.text)
+    x$fpl$ffltu                              0x00006454   Section       38  fflt_clz.o(x$fpl$ffltu)
+    .constdata                               0x0000647a   Section     1152  oled.o(.constdata)
+    x$fpl$usenofp                            0x0000647a   Section        0  usenofp.o(x$fpl$usenofp)
+    .conststring                             0x000068fc   Section       17  uart.o(.conststring)
     .data                                    0x20000000   Section        4  system_mk60dz10.o(.data)
     .data                                    0x20000004   Section       79  main.o(.data)
     .data                                    0x20000053   Section        1  isr.o(.data)
@@ -755,164 +755,164 @@ Image Symbol Table
     USBDCD_IRQHandler                        0x0000066f   Thumb Code     0  startup_mk60dz10.o(.text)
     Watchdog_IRQHandler                      0x0000066f   Thumb Code     0  startup_mk60dz10.o(.text)
     __user_initial_stackheap                 0x00000671   Thumb Code     0  startup_mk60dz10.o(.text)
-    main                                     0x00000691   Thumb Code   536  main.o(.text)
-    assert_failed                            0x000008a9   Thumb Code    18  main.o(.text)
-    PIT0_IRQHandler                          0x00000941   Thumb Code    12  isr.o(.text)
-    PIT1_IRQHandler                          0x0000094d   Thumb Code    80  isr.o(.text)
-    UART4_RX_TX_IRQHandler                   0x0000099d   Thumb Code    28  isr.o(.text)
-    HardFault_Handler                        0x000009b9   Thumb Code    58  isr.o(.text)
-    NMI_Handler                              0x000009f3   Thumb Code    58  isr.o(.text)
-    MemManage_Handler                        0x00000a2d   Thumb Code    24  isr.o(.text)
-    BusFault_Handler                         0x00000a45   Thumb Code    24  isr.o(.text)
-    UsageFault_Handler                       0x00000a5d   Thumb Code    24  isr.o(.text)
-    GetCPUInfo                               0x00000add   Thumb Code   736  sys.o(.text)
-    SystemClockSetup                         0x00000dbd   Thumb Code   714  sys.o(.text)
-    NVIC_Init                                0x00001087   Thumb Code   250  sys.o(.text)
-    SystemSoftReset                          0x00001181   Thumb Code    34  sys.o(.text)
-    EnableInterrupts                         0x000011a3   Thumb Code     4  sys.o(.text)
-    DisableInterrupts                        0x000011a7   Thumb Code     4  sys.o(.text)
-    SetVectorTable                           0x000011ab   Thumb Code    32  sys.o(.text)
-    GetFWVersion                             0x000011cb   Thumb Code     4  sys.o(.text)
-    DelayInit                                0x00001209   Thumb Code    54  delay.o(.text)
-    DelayUs                                  0x0000123f   Thumb Code    68  delay.o(.text)
-    DelayMs                                  0x00001283   Thumb Code    80  delay.o(.text)
-    DMA_StructInit                           0x000012e5   Thumb Code    28  dma.o(.text)
-    DMA_SetEnableReq                         0x00001301   Thumb Code    72  dma.o(.text)
-    DMA_Init                                 0x00001349   Thumb Code   434  dma.o(.text)
-    DMA_IsComplete                           0x000014fb   Thumb Code    40  dma.o(.text)
-    DMA_SetCurrDataCounter                   0x00001523   Thumb Code    52  dma.o(.text)
-    DMA_GetCurrDataCounter                   0x00001557   Thumb Code    32  dma.o(.text)
-    DMA_ITConfig                             0x00001577   Thumb Code   112  dma.o(.text)
-    DMA_GetITStatus                          0x000015e7   Thumb Code    44  dma.o(.text)
-    DMA_ClearITPendingBit                    0x00001613   Thumb Code    30  dma.o(.text)
-    FTM_PWM_ChangeDuty                       0x00001a8d   Thumb Code   292  ftm.o(.text)
-    FTM_Init                                 0x00001bb1   Thumb Code   622  ftm.o(.text)
-    FTM_ITConfig                             0x00001e1f   Thumb Code   326  ftm.o(.text)
-    FTM_GetITStatus                          0x00001f65   Thumb Code   166  ftm.o(.text)
-    FTM_ClearITPendingBit                    0x0000200b   Thumb Code   144  ftm.o(.text)
-    GPIO_Init                                0x000020a9   Thumb Code   648  gpio.o(.text)
-    GPIO_GetITStates                         0x00002331   Thumb Code    84  gpio.o(.text)
-    GPIO_ClearITPendingBit                   0x00002385   Thumb Code   138  gpio.o(.text)
-    GPIO_StructInit                          0x0000240f   Thumb Code    10  gpio.o(.text)
-    GPIO_WriteBit                            0x00002419   Thumb Code   110  gpio.o(.text)
-    GPIO_SetBits                             0x00002487   Thumb Code   148  gpio.o(.text)
-    GPIO_ResetBits                           0x0000251b   Thumb Code    82  gpio.o(.text)
-    GPIO_ToggleBit                           0x0000256d   Thumb Code    86  gpio.o(.text)
-    GPIO_Write                               0x000025c3   Thumb Code    60  gpio.o(.text)
-    GPIO_ReadOutputDataBit                   0x000025ff   Thumb Code    96  gpio.o(.text)
-    GPIO_ReadOutputData                      0x0000265f   Thumb Code    60  gpio.o(.text)
-    GPIO_ReadInputDataBit                    0x0000269b   Thumb Code    96  gpio.o(.text)
-    GPIO_ReadInputData                       0x000026fb   Thumb Code    58  gpio.o(.text)
-    PIT_Init                                 0x0000273d   Thumb Code   154  pit.o(.text)
-    PIT_GetLoadValue                         0x000027d7   Thumb Code    38  pit.o(.text)
-    PIT_GetCurrentValue                      0x000027fd   Thumb Code    38  pit.o(.text)
-    PIT_SetLoadValue                         0x00002823   Thumb Code    40  pit.o(.text)
-    PIT_Start                                0x0000284b   Thumb Code    50  pit.o(.text)
-    PIT_Stop                                 0x0000287d   Thumb Code    50  pit.o(.text)
-    PIT_ITConfig                             0x000028af   Thumb Code   110  pit.o(.text)
-    PIT_GetITStatus                          0x0000291d   Thumb Code    70  pit.o(.text)
-    PIT_ClearITPendingBit                    0x00002963   Thumb Code    64  pit.o(.text)
-    UART_Init                                0x000029cd   Thumb Code   632  uart.o(.text)
-    UART_DebugPortInit                       0x00002c45   Thumb Code   102  uart.o(.text)
-    UART_ITConfig                            0x00002cab   Thumb Code   212  uart.o(.text)
-    UART_GetITStatus                         0x00002d7f   Thumb Code   284  uart.o(.text)
-    UART_SendData                            0x00002e9b   Thumb Code    16  uart.o(.text)
-    UART_SendDataInt                         0x00002eab   Thumb Code   104  uart.o(.text)
-    UART_DMACmd                              0x00002f13   Thumb Code   168  uart.o(.text)
-    UART_SendDataIntProcess                  0x00002fbb   Thumb Code    82  uart.o(.text)
-    UART_ReceiveData                         0x0000300d   Thumb Code    22  uart.o(.text)
-    UART_printf                              0x0000306d   Thumb Code   106  uart.o(.text)
-    DisplayCPUInfo                           0x000030d7   Thumb Code   336  uart.o(.text)
-    ADC_Init                                 0x0000352d   Thumb Code   594  adc.o(.text)
-    ADC_GetConversionValue                   0x0000377f   Thumb Code   118  adc.o(.text)
-    ADC_ITConfig                             0x000037f5   Thumb Code   104  adc.o(.text)
-    ADC_GetITStatus                          0x0000385d   Thumb Code    90  adc.o(.text)
-    ADC_DMACmd                               0x000038b7   Thumb Code    90  adc.o(.text)
-    SD_SetBaudRate                           0x00003949   Thumb Code   170  sd.o(.text)
-    SDHC_is_running                          0x000039f3   Thumb Code    20  sd.o(.text)
-    SD_GetCapacity                           0x00003a07   Thumb Code    98  sd.o(.text)
-    SD_StatusWait                            0x00003a69   Thumb Code    18  sd.o(.text)
-    SD_SendCommand                           0x00003a7b   Thumb Code   242  sd.o(.text)
-    SD_Init                                  0x00003b6d   Thumb Code   674  sd.o(.text)
-    SD_ReadSingleBlock                       0x00003e0f   Thumb Code   136  sd.o(.text)
-    SD_WriteSingleBlock                      0x00003e97   Thumb Code   138  sd.o(.text)
-    SD_ReadMultiBlock                        0x00003f21   Thumb Code   266  sd.o(.text)
-    SD_WriteMultiBlock                       0x0000402b   Thumb Code   256  sd.o(.text)
-    ENET_HashAddress                         0x00004211   Thumb Code    58  enet.o(.text)
-    ENET_SetAddress                          0x0000424b   Thumb Code   106  enet.o(.text)
-    ENET_MiiRead                             0x000042b5   Thumb Code   106  enet.o(.text)
-    ENET_MiiWrite                            0x0000431f   Thumb Code   104  enet.o(.text)
-    ENET_MiiInit                             0x00004387   Thumb Code    48  enet.o(.text)
-    ENET_Init                                0x000043b7   Thumb Code   870  enet.o(.text)
-    ENET_MiiLinkState                        0x0000471d   Thumb Code    34  enet.o(.text)
-    ENET_MacSendData                         0x0000473f   Thumb Code    76  enet.o(.text)
-    ENET_MacRecData                          0x0000478b   Thumb Code   138  enet.o(.text)
-    ENET_Transmit_IRQHandler                 0x00004815   Thumb Code    14  enet.o(.text)
-    ENET_Receive_IRQHandler                  0x00004823   Thumb Code    14  enet.o(.text)
-    ENET_Error_IRQHandler                    0x00004831   Thumb Code    10  enet.o(.text)
-    OLED_WrDat                               0x00004895   Thumb Code   114  oled.o(.text)
-    OLED_WrCmd                               0x00004907   Thumb Code   116  oled.o(.text)
-    OLED_Set_XY                              0x0000497b   Thumb Code    40  oled.o(.text)
-    OLED_Clear                               0x000049a3   Thumb Code    56  oled.o(.text)
-    OLED_Delay_ms                            0x000049db   Thumb Code    28  oled.o(.text)
-    OLED_Pin_Init                            0x000049f7   Thumb Code    38  oled.o(.text)
-    OLED_Init                                0x00004a1d   Thumb Code   256  oled.o(.text)
-    OLED_Write_Char                          0x00004b1d   Thumb Code   194  oled.o(.text)
-    OLED_Write_String                        0x00004bdf   Thumb Code    44  oled.o(.text)
-    OLED_Write_Num3                          0x00004c0b   Thumb Code    82  oled.o(.text)
-    OLED_Write_Num4                          0x00004c5d   Thumb Code   138  oled.o(.text)
-    OLED_Write_Num5                          0x00004ce7   Thumb Code   150  oled.o(.text)
-    OLED_Write_Num2                          0x00004d7d   Thumb Code    70  oled.o(.text)
-    DelayNs                                  0x00004dc5   Thumb Code    18  ccd.o(.text)
-    PixelAverage                             0x00004dd7   Thumb Code    32  ccd.o(.text)
-    StartIntegration                         0x00004df7   Thumb Code   120  ccd.o(.text)
-    ImageCapture                             0x00004e6f   Thumb Code   148  ccd.o(.text)
-    CalculateIntegrationTime                 0x00004f03   Thumb Code   104  ccd.o(.text)
-    oled_collect                             0x00004f6b   Thumb Code   118  ccd.o(.text)
-    oled_show                                0x00004fe1   Thumb Code    48  ccd.o(.text)
-    CCD_HeiXian                              0x00005011   Thumb Code  2154  ccd.o(.text)
-    OLED_ZhongXian                           0x0000587b   Thumb Code    60  ccd.o(.text)
-    Set_DataToCon                            0x00005911   Thumb Code   246  data_sent.o(.text)
-    Set_Uart_DMA_Enable                      0x00005a07   Thumb Code    32  data_sent.o(.text)
-    Set_Uart_DMA_DAddr                       0x00005a27   Thumb Code     8  data_sent.o(.text)
-    UART_Send_Con                            0x00005a2f   Thumb Code    34  data_sent.o(.text)
-    Data_UpLoad                              0x00005a51   Thumb Code    30  data_sent.o(.text)
-    DataInit                                 0x00005a6f   Thumb Code    74  data_sent.o(.text)
-    NrfDataInit                              0x00005ab9   Thumb Code     8  data_sent.o(.text)
-    Data_Uart_Init                           0x00005ac1   Thumb Code   114  data_sent.o(.text)
-    DMA_Uart_ClearITPendingBit               0x00005b33   Thumb Code    14  data_sent.o(.text)
-    Sd_Init                                  0x00005b41   Thumb Code    24  data_sent.o(.text)
-    Sd_X                                     0x00005b59   Thumb Code    94  data_sent.o(.text)
-    Sd_D                                     0x00005bb7   Thumb Code   138  data_sent.o(.text)
-    anjian_menu                              0x00005ca1   Thumb Code   462  menu.o(.text)
-    Menu_Init                                0x00005e6f   Thumb Code   416  menu.o(.text)
-    chuinit_Init                             0x000060b5   Thumb Code   386  chuinit.o(.text)
-    strcpy                                   0x00006251   Thumb Code    72  strcpy.o(.text)
-    __aeabi_memcpy                           0x00006299   Thumb Code     0  rt_memcpy_v6.o(.text)
-    __rt_memcpy                              0x00006299   Thumb Code   138  rt_memcpy_v6.o(.text)
-    _memcpy_lastbytes                        0x000062ff   Thumb Code     0  rt_memcpy_v6.o(.text)
-    __use_two_region_memory                  0x00006323   Thumb Code     2  heapauxi.o(.text)
-    __rt_heap_escrow$2region                 0x00006325   Thumb Code     2  heapauxi.o(.text)
-    __rt_heap_expand$2region                 0x00006327   Thumb Code     2  heapauxi.o(.text)
-    __aeabi_memcpy4                          0x00006329   Thumb Code     0  rt_memcpy_w.o(.text)
-    __aeabi_memcpy8                          0x00006329   Thumb Code     0  rt_memcpy_w.o(.text)
-    __rt_memcpy_w                            0x00006329   Thumb Code   100  rt_memcpy_w.o(.text)
-    _memcpy_lastbytes_aligned                0x00006371   Thumb Code     0  rt_memcpy_w.o(.text)
-    __user_setup_stackheap                   0x0000638d   Thumb Code    74  sys_stackheap_outer.o(.text)
-    exit                                     0x000063d7   Thumb Code    12  exit.o(.text)
-    __user_libspace                          0x000063e5   Thumb Code     8  libspace.o(.text)
-    __user_perproc_libspace                  0x000063e5   Thumb Code     0  libspace.o(.text)
-    __user_perthread_libspace                0x000063e5   Thumb Code     0  libspace.o(.text)
-    _sys_exit                                0x000063ed   Thumb Code     8  sys_exit.o(.text)
-    __I$use$semihosting                      0x000063f9   Thumb Code     0  use_no_semi.o(.text)
-    __use_no_semihosting_swi                 0x000063f9   Thumb Code     2  use_no_semi.o(.text)
-    __semihosting_library_function           0x000063fb   Thumb Code     0  indicate_semi.o(.text)
-    __aeabi_ui2f                             0x000063fd   Thumb Code     0  fflt_clz.o(x$fpl$ffltu)
-    _ffltu                                   0x000063fd   Thumb Code    38  fflt_clz.o(x$fpl$ffltu)
-    LargeChars                               0x00006422   Data        1152  oled.o(.constdata)
-    __I$use$fp                               0x00006422   Number         0  usenofp.o(x$fpl$usenofp)
-    Region$$Table$$Base                      0x000068b8   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x000068d8   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x00000691   Thumb Code   556  main.o(.text)
+    assert_failed                            0x000008bd   Thumb Code    18  main.o(.text)
+    PIT0_IRQHandler                          0x00000955   Thumb Code    12  isr.o(.text)
+    PIT1_IRQHandler                          0x00000961   Thumb Code    80  isr.o(.text)
+    UART4_RX_TX_IRQHandler                   0x000009b1   Thumb Code    28  isr.o(.text)
+    HardFault_Handler                        0x000009cd   Thumb Code    58  isr.o(.text)
+    NMI_Handler                              0x00000a07   Thumb Code    58  isr.o(.text)
+    MemManage_Handler                        0x00000a41   Thumb Code    24  isr.o(.text)
+    BusFault_Handler                         0x00000a59   Thumb Code    24  isr.o(.text)
+    UsageFault_Handler                       0x00000a71   Thumb Code    24  isr.o(.text)
+    GetCPUInfo                               0x00000af1   Thumb Code   736  sys.o(.text)
+    SystemClockSetup                         0x00000dd1   Thumb Code   714  sys.o(.text)
+    NVIC_Init                                0x0000109b   Thumb Code   250  sys.o(.text)
+    SystemSoftReset                          0x00001195   Thumb Code    34  sys.o(.text)
+    EnableInterrupts                         0x000011b7   Thumb Code     4  sys.o(.text)
+    DisableInterrupts                        0x000011bb   Thumb Code     4  sys.o(.text)
+    SetVectorTable                           0x000011bf   Thumb Code    32  sys.o(.text)
+    GetFWVersion                             0x000011df   Thumb Code     4  sys.o(.text)
+    DelayInit                                0x0000121d   Thumb Code    54  delay.o(.text)
+    DelayUs                                  0x00001253   Thumb Code    68  delay.o(.text)
+    DelayMs                                  0x00001297   Thumb Code    80  delay.o(.text)
+    DMA_StructInit                           0x000012f9   Thumb Code    28  dma.o(.text)
+    DMA_SetEnableReq                         0x00001315   Thumb Code    72  dma.o(.text)
+    DMA_Init                                 0x0000135d   Thumb Code   434  dma.o(.text)
+    DMA_IsComplete                           0x0000150f   Thumb Code    40  dma.o(.text)
+    DMA_SetCurrDataCounter                   0x00001537   Thumb Code    52  dma.o(.text)
+    DMA_GetCurrDataCounter                   0x0000156b   Thumb Code    32  dma.o(.text)
+    DMA_ITConfig                             0x0000158b   Thumb Code   112  dma.o(.text)
+    DMA_GetITStatus                          0x000015fb   Thumb Code    44  dma.o(.text)
+    DMA_ClearITPendingBit                    0x00001627   Thumb Code    30  dma.o(.text)
+    FTM_PWM_ChangeDuty                       0x00001aa1   Thumb Code   292  ftm.o(.text)
+    FTM_Init                                 0x00001bc5   Thumb Code   622  ftm.o(.text)
+    FTM_ITConfig                             0x00001e33   Thumb Code   326  ftm.o(.text)
+    FTM_GetITStatus                          0x00001f79   Thumb Code   166  ftm.o(.text)
+    FTM_ClearITPendingBit                    0x0000201f   Thumb Code   144  ftm.o(.text)
+    GPIO_Init                                0x000020bd   Thumb Code   648  gpio.o(.text)
+    GPIO_GetITStates                         0x00002345   Thumb Code    84  gpio.o(.text)
+    GPIO_ClearITPendingBit                   0x00002399   Thumb Code   138  gpio.o(.text)
+    GPIO_StructInit                          0x00002423   Thumb Code    10  gpio.o(.text)
+    GPIO_WriteBit                            0x0000242d   Thumb Code   110  gpio.o(.text)
+    GPIO_SetBits                             0x0000249b   Thumb Code   148  gpio.o(.text)
+    GPIO_ResetBits                           0x0000252f   Thumb Code    82  gpio.o(.text)
+    GPIO_ToggleBit                           0x00002581   Thumb Code    86  gpio.o(.text)
+    GPIO_Write                               0x000025d7   Thumb Code    60  gpio.o(.text)
+    GPIO_ReadOutputDataBit                   0x00002613   Thumb Code    96  gpio.o(.text)
+    GPIO_ReadOutputData                      0x00002673   Thumb Code    60  gpio.o(.text)
+    GPIO_ReadInputDataBit                    0x000026af   Thumb Code    96  gpio.o(.text)
+    GPIO_ReadInputData                       0x0000270f   Thumb Code    58  gpio.o(.text)
+    PIT_Init                                 0x00002751   Thumb Code   154  pit.o(.text)
+    PIT_GetLoadValue                         0x000027eb   Thumb Code    38  pit.o(.text)
+    PIT_GetCurrentValue                      0x00002811   Thumb Code    38  pit.o(.text)
+    PIT_SetLoadValue                         0x00002837   Thumb Code    40  pit.o(.text)
+    PIT_Start                                0x0000285f   Thumb Code    50  pit.o(.text)
+    PIT_Stop                                 0x00002891   Thumb Code    50  pit.o(.text)
+    PIT_ITConfig                             0x000028c3   Thumb Code   110  pit.o(.text)
+    PIT_GetITStatus                          0x00002931   Thumb Code    70  pit.o(.text)
+    PIT_ClearITPendingBit                    0x00002977   Thumb Code    64  pit.o(.text)
+    UART_Init                                0x000029e1   Thumb Code   632  uart.o(.text)
+    UART_DebugPortInit                       0x00002c59   Thumb Code   102  uart.o(.text)
+    UART_ITConfig                            0x00002cbf   Thumb Code   212  uart.o(.text)
+    UART_GetITStatus                         0x00002d93   Thumb Code   284  uart.o(.text)
+    UART_SendData                            0x00002eaf   Thumb Code    16  uart.o(.text)
+    UART_SendDataInt                         0x00002ebf   Thumb Code   104  uart.o(.text)
+    UART_DMACmd                              0x00002f27   Thumb Code   168  uart.o(.text)
+    UART_SendDataIntProcess                  0x00002fcf   Thumb Code    82  uart.o(.text)
+    UART_ReceiveData                         0x00003021   Thumb Code    22  uart.o(.text)
+    UART_printf                              0x00003081   Thumb Code   106  uart.o(.text)
+    DisplayCPUInfo                           0x000030eb   Thumb Code   336  uart.o(.text)
+    ADC_Init                                 0x00003541   Thumb Code   594  adc.o(.text)
+    ADC_GetConversionValue                   0x00003793   Thumb Code   118  adc.o(.text)
+    ADC_ITConfig                             0x00003809   Thumb Code   104  adc.o(.text)
+    ADC_GetITStatus                          0x00003871   Thumb Code    90  adc.o(.text)
+    ADC_DMACmd                               0x000038cb   Thumb Code    90  adc.o(.text)
+    SD_SetBaudRate                           0x0000395d   Thumb Code   170  sd.o(.text)
+    SDHC_is_running                          0x00003a07   Thumb Code    20  sd.o(.text)
+    SD_GetCapacity                           0x00003a1b   Thumb Code    98  sd.o(.text)
+    SD_StatusWait                            0x00003a7d   Thumb Code    18  sd.o(.text)
+    SD_SendCommand                           0x00003a8f   Thumb Code   242  sd.o(.text)
+    SD_Init                                  0x00003b81   Thumb Code   674  sd.o(.text)
+    SD_ReadSingleBlock                       0x00003e23   Thumb Code   136  sd.o(.text)
+    SD_WriteSingleBlock                      0x00003eab   Thumb Code   138  sd.o(.text)
+    SD_ReadMultiBlock                        0x00003f35   Thumb Code   266  sd.o(.text)
+    SD_WriteMultiBlock                       0x0000403f   Thumb Code   256  sd.o(.text)
+    ENET_HashAddress                         0x00004225   Thumb Code    58  enet.o(.text)
+    ENET_SetAddress                          0x0000425f   Thumb Code   106  enet.o(.text)
+    ENET_MiiRead                             0x000042c9   Thumb Code   106  enet.o(.text)
+    ENET_MiiWrite                            0x00004333   Thumb Code   104  enet.o(.text)
+    ENET_MiiInit                             0x0000439b   Thumb Code    48  enet.o(.text)
+    ENET_Init                                0x000043cb   Thumb Code   870  enet.o(.text)
+    ENET_MiiLinkState                        0x00004731   Thumb Code    34  enet.o(.text)
+    ENET_MacSendData                         0x00004753   Thumb Code    76  enet.o(.text)
+    ENET_MacRecData                          0x0000479f   Thumb Code   138  enet.o(.text)
+    ENET_Transmit_IRQHandler                 0x00004829   Thumb Code    14  enet.o(.text)
+    ENET_Receive_IRQHandler                  0x00004837   Thumb Code    14  enet.o(.text)
+    ENET_Error_IRQHandler                    0x00004845   Thumb Code    10  enet.o(.text)
+    OLED_WrDat                               0x000048a9   Thumb Code   114  oled.o(.text)
+    OLED_WrCmd                               0x0000491b   Thumb Code   116  oled.o(.text)
+    OLED_Set_XY                              0x0000498f   Thumb Code    40  oled.o(.text)
+    OLED_Clear                               0x000049b7   Thumb Code    56  oled.o(.text)
+    OLED_Delay_ms                            0x000049ef   Thumb Code    28  oled.o(.text)
+    OLED_Pin_Init                            0x00004a0b   Thumb Code    38  oled.o(.text)
+    OLED_Init                                0x00004a31   Thumb Code   256  oled.o(.text)
+    OLED_Write_Char                          0x00004b31   Thumb Code   194  oled.o(.text)
+    OLED_Write_String                        0x00004bf3   Thumb Code    44  oled.o(.text)
+    OLED_Write_Num3                          0x00004c1f   Thumb Code    82  oled.o(.text)
+    OLED_Write_Num4                          0x00004c71   Thumb Code   138  oled.o(.text)
+    OLED_Write_Num5                          0x00004cfb   Thumb Code   150  oled.o(.text)
+    OLED_Write_Num2                          0x00004d91   Thumb Code    70  oled.o(.text)
+    DelayNs                                  0x00004dd9   Thumb Code    18  ccd.o(.text)
+    PixelAverage                             0x00004deb   Thumb Code    32  ccd.o(.text)
+    StartIntegration                         0x00004e0b   Thumb Code   120  ccd.o(.text)
+    ImageCapture                             0x00004e83   Thumb Code   148  ccd.o(.text)
+    CalculateIntegrationTime                 0x00004f17   Thumb Code   104  ccd.o(.text)
+    oled_collect                             0x00004f7f   Thumb Code   118  ccd.o(.text)
+    oled_show                                0x00004ff5   Thumb Code    48  ccd.o(.text)
+    CCD_HeiXian                              0x00005025   Thumb Code  2216  ccd.o(.text)
+    OLED_ZhongXian                           0x000058cd   Thumb Code    60  ccd.o(.text)
+    Set_DataToCon                            0x00005969   Thumb Code   246  data_sent.o(.text)
+    Set_Uart_DMA_Enable                      0x00005a5f   Thumb Code    32  data_sent.o(.text)
+    Set_Uart_DMA_DAddr                       0x00005a7f   Thumb Code     8  data_sent.o(.text)
+    UART_Send_Con                            0x00005a87   Thumb Code    34  data_sent.o(.text)
+    Data_UpLoad                              0x00005aa9   Thumb Code    30  data_sent.o(.text)
+    DataInit                                 0x00005ac7   Thumb Code    74  data_sent.o(.text)
+    NrfDataInit                              0x00005b11   Thumb Code     8  data_sent.o(.text)
+    Data_Uart_Init                           0x00005b19   Thumb Code   114  data_sent.o(.text)
+    DMA_Uart_ClearITPendingBit               0x00005b8b   Thumb Code    14  data_sent.o(.text)
+    Sd_Init                                  0x00005b99   Thumb Code    24  data_sent.o(.text)
+    Sd_X                                     0x00005bb1   Thumb Code    94  data_sent.o(.text)
+    Sd_D                                     0x00005c0f   Thumb Code   138  data_sent.o(.text)
+    anjian_menu                              0x00005cf9   Thumb Code   462  menu.o(.text)
+    Menu_Init                                0x00005ec7   Thumb Code   416  menu.o(.text)
+    chuinit_Init                             0x0000610d   Thumb Code   386  chuinit.o(.text)
+    strcpy                                   0x000062a9   Thumb Code    72  strcpy.o(.text)
+    __aeabi_memcpy                           0x000062f1   Thumb Code     0  rt_memcpy_v6.o(.text)
+    __rt_memcpy                              0x000062f1   Thumb Code   138  rt_memcpy_v6.o(.text)
+    _memcpy_lastbytes                        0x00006357   Thumb Code     0  rt_memcpy_v6.o(.text)
+    __use_two_region_memory                  0x0000637b   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x0000637d   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x0000637f   Thumb Code     2  heapauxi.o(.text)
+    __aeabi_memcpy4                          0x00006381   Thumb Code     0  rt_memcpy_w.o(.text)
+    __aeabi_memcpy8                          0x00006381   Thumb Code     0  rt_memcpy_w.o(.text)
+    __rt_memcpy_w                            0x00006381   Thumb Code   100  rt_memcpy_w.o(.text)
+    _memcpy_lastbytes_aligned                0x000063c9   Thumb Code     0  rt_memcpy_w.o(.text)
+    __user_setup_stackheap                   0x000063e5   Thumb Code    74  sys_stackheap_outer.o(.text)
+    exit                                     0x0000642f   Thumb Code    12  exit.o(.text)
+    __user_libspace                          0x0000643d   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x0000643d   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x0000643d   Thumb Code     0  libspace.o(.text)
+    _sys_exit                                0x00006445   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x00006451   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x00006451   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x00006453   Thumb Code     0  indicate_semi.o(.text)
+    __aeabi_ui2f                             0x00006455   Thumb Code     0  fflt_clz.o(x$fpl$ffltu)
+    _ffltu                                   0x00006455   Thumb Code    38  fflt_clz.o(x$fpl$ffltu)
+    LargeChars                               0x0000647a   Data        1152  oled.o(.constdata)
+    __I$use$fp                               0x0000647a   Number         0  usenofp.o(x$fpl$usenofp)
+    Region$$Table$$Base                      0x00006910   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00006930   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_mk60dz10.o(.data)
     FTMDuty                                  0x20000004   Data           2  main.o(.data)
     FTMDuty_1                                0x20000006   Data           2  main.o(.data)
@@ -982,102 +982,102 @@ Memory Map of the image
 
   Image Entry point : 0x00000411
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00006958, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000069b0, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x000068d8, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00006930, Max: 0x00080000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x00000400   Data   RO           51    RESET               startup_mk60dz10.o
     0x00000400   0x00000010   Code   RO           52    .ARM.__at_0x400     startup_mk60dz10.o
-    0x00000410   0x00000008   Code   RO          997  * !!!main             c_w.l(__main.o)
-    0x00000418   0x00000034   Code   RO         1162    !!!scatter          c_w.l(__scatter.o)
-    0x0000044c   0x0000001a   Code   RO         1164    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x00000410   0x00000008   Code   RO          985  * !!!main             c_w.l(__main.o)
+    0x00000418   0x00000034   Code   RO         1150    !!!scatter          c_w.l(__scatter.o)
+    0x0000044c   0x0000001a   Code   RO         1152    !!handler_copy      c_w.l(__scatter_copy.o)
     0x00000466   0x00000002   PAD
-    0x00000468   0x0000001c   Code   RO         1166    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x00000484   0x00000002   Code   RO         1033    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x00000486   0x00000000   Code   RO         1040    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1042    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1045    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1047    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1049    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1052    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1054    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1056    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1058    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1060    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1062    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1064    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1066    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1068    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1070    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1072    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1076    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1078    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1080    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x00000486   0x00000000   Code   RO         1082    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x00000486   0x00000002   Code   RO         1083    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
-    0x00000488   0x00000002   Code   RO         1103    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x0000048a   0x00000000   Code   RO         1117    .ARM.Collect$$libshutdown$$00000003  c_w.l(libshutdown2.o)
-    0x0000048a   0x00000000   Code   RO         1120    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
-    0x0000048a   0x00000000   Code   RO         1123    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
-    0x0000048a   0x00000000   Code   RO         1125    .ARM.Collect$$libshutdown$$0000000B  c_w.l(libshutdown2.o)
-    0x0000048a   0x00000000   Code   RO         1128    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
-    0x0000048a   0x00000002   Code   RO         1129    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x0000048c   0x00000000   Code   RO         1005    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x0000048c   0x00000000   Code   RO         1010    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x0000048c   0x00000006   Code   RO         1022    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x00000492   0x00000000   Code   RO         1012    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x00000492   0x00000004   Code   RO         1013    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x00000496   0x00000000   Code   RO         1015    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x00000496   0x00000008   Code   RO         1016    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x0000049e   0x00000002   Code   RO         1037    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x000004a0   0x00000000   Code   RO         1085    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x000004a0   0x00000004   Code   RO         1086    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x000004a4   0x00000006   Code   RO         1087    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x00000468   0x0000001c   Code   RO         1154    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x00000484   0x00000002   Code   RO         1021    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x00000486   0x00000000   Code   RO         1028    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1030    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1033    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1035    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1037    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1040    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1042    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1044    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1046    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1048    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1050    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1052    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1054    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1056    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1058    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1060    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1064    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1066    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1068    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x00000486   0x00000000   Code   RO         1070    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x00000486   0x00000002   Code   RO         1071    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x00000488   0x00000002   Code   RO         1091    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x0000048a   0x00000000   Code   RO         1105    .ARM.Collect$$libshutdown$$00000003  c_w.l(libshutdown2.o)
+    0x0000048a   0x00000000   Code   RO         1108    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
+    0x0000048a   0x00000000   Code   RO         1111    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
+    0x0000048a   0x00000000   Code   RO         1113    .ARM.Collect$$libshutdown$$0000000B  c_w.l(libshutdown2.o)
+    0x0000048a   0x00000000   Code   RO         1116    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
+    0x0000048a   0x00000002   Code   RO         1117    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x0000048c   0x00000000   Code   RO          993    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x0000048c   0x00000000   Code   RO          998    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x0000048c   0x00000006   Code   RO         1010    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x00000492   0x00000000   Code   RO         1000    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x00000492   0x00000004   Code   RO         1001    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x00000496   0x00000000   Code   RO         1003    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x00000496   0x00000008   Code   RO         1004    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x0000049e   0x00000002   Code   RO         1025    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x000004a0   0x00000000   Code   RO         1073    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x000004a0   0x00000004   Code   RO         1074    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x000004a4   0x00000006   Code   RO         1075    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x000004aa   0x00000002   PAD
     0x000004ac   0x00000002   Code   RO          199    .emb_text           isr.o
     0x000004ae   0x00000002   PAD
-    0x000004b0   0x00000004   Code   RO          712    .revsh_text         enet.o
+    0x000004b0   0x00000004   Code   RO          699    .revsh_text         enet.o
     0x000004b4   0x000001a0   Code   RO            3    .text               system_mk60dz10.o
     0x00000654   0x0000003c   Code   RO           53    .text               startup_mk60dz10.o
-    0x00000690   0x000002b0   Code   RO           61    .text               main.o
-    0x00000940   0x0000019c   Code   RO          200    .text               isr.o
-    0x00000adc   0x0000072c   Code   RO          289    .text               sys.o
-    0x00001208   0x000000dc   Code   RO          319    .text               delay.o
-    0x000012e4   0x00000374   Code   RO          344    .text               dma.o
-    0x00001658   0x00000a50   Code   RO          364    .text               ftm.o
-    0x000020a8   0x00000694   Code   RO          384    .text               gpio.o
-    0x0000273c   0x00000290   Code   RO          424    .text               pit.o
-    0x000029cc   0x00000ab4   Code   RO          470    .text               uart.o
-    0x00003480   0x000004c8   Code   RO          521    .text               adc.o
-    0x00003948   0x00000818   Code   RO          670    .text               sd.o
-    0x00004160   0x00000734   Code   RO          713    .text               enet.o
-    0x00004894   0x0000052e   Code   RO          859    .text               oled.o
-    0x00004dc2   0x00000002   PAD
-    0x00004dc4   0x00000b4c   Code   RO          882    .text               ccd.o
-    0x00005910   0x00000390   Code   RO          913    .text               data_sent.o
-    0x00005ca0   0x00000414   Code   RO          945    .text               menu.o
-    0x000060b4   0x0000019c   Code   RO          971    .text               chuinit.o
-    0x00006250   0x00000048   Code   RO          991    .text               c_w.l(strcpy.o)
-    0x00006298   0x0000008a   Code   RO          993    .text               c_w.l(rt_memcpy_v6.o)
-    0x00006322   0x00000006   Code   RO          995    .text               c_w.l(heapauxi.o)
-    0x00006328   0x00000064   Code   RO         1006    .text               c_w.l(rt_memcpy_w.o)
-    0x0000638c   0x0000004a   Code   RO         1024    .text               c_w.l(sys_stackheap_outer.o)
-    0x000063d6   0x0000000c   Code   RO         1026    .text               c_w.l(exit.o)
-    0x000063e2   0x00000002   PAD
-    0x000063e4   0x00000008   Code   RO         1034    .text               c_w.l(libspace.o)
-    0x000063ec   0x0000000c   Code   RO         1095    .text               c_w.l(sys_exit.o)
-    0x000063f8   0x00000002   Code   RO         1106    .text               c_w.l(use_no_semi.o)
-    0x000063fa   0x00000000   Code   RO         1108    .text               c_w.l(indicate_semi.o)
-    0x000063fa   0x00000002   PAD
-    0x000063fc   0x00000026   Code   RO          999    x$fpl$ffltu         fz_ws.l(fflt_clz.o)
-    0x00006422   0x00000000   Code   RO         1008    x$fpl$usenofp       fz_ws.l(usenofp.o)
-    0x00006422   0x00000480   Data   RO          860    .constdata          oled.o
-    0x000068a2   0x00000002   PAD
-    0x000068a4   0x00000011   Data   RO          472    .conststring        uart.o
-    0x000068b5   0x00000003   PAD
-    0x000068b8   0x00000020   Data   RO         1160    Region$$Table       anon$$obj.o
+    0x00000690   0x000002c4   Code   RO           61    .text               main.o
+    0x00000954   0x0000019c   Code   RO          200    .text               isr.o
+    0x00000af0   0x0000072c   Code   RO          235    .text               sys.o
+    0x0000121c   0x000000dc   Code   RO          269    .text               delay.o
+    0x000012f8   0x00000374   Code   RO          298    .text               dma.o
+    0x0000166c   0x00000a50   Code   RO          321    .text               ftm.o
+    0x000020bc   0x00000694   Code   RO          344    .text               gpio.o
+    0x00002750   0x00000290   Code   RO          390    .text               pit.o
+    0x000029e0   0x00000ab4   Code   RO          439    .text               uart.o
+    0x00003494   0x000004c8   Code   RO          490    .text               adc.o
+    0x0000395c   0x00000818   Code   RO          651    .text               sd.o
+    0x00004174   0x00000734   Code   RO          700    .text               enet.o
+    0x000048a8   0x0000052e   Code   RO          850    .text               oled.o
+    0x00004dd6   0x00000002   PAD
+    0x00004dd8   0x00000b90   Code   RO          876    .text               ccd.o
+    0x00005968   0x00000390   Code   RO          904    .text               data_sent.o
+    0x00005cf8   0x00000414   Code   RO          932    .text               menu.o
+    0x0000610c   0x0000019c   Code   RO          955    .text               chuinit.o
+    0x000062a8   0x00000048   Code   RO          979    .text               c_w.l(strcpy.o)
+    0x000062f0   0x0000008a   Code   RO          981    .text               c_w.l(rt_memcpy_v6.o)
+    0x0000637a   0x00000006   Code   RO          983    .text               c_w.l(heapauxi.o)
+    0x00006380   0x00000064   Code   RO          994    .text               c_w.l(rt_memcpy_w.o)
+    0x000063e4   0x0000004a   Code   RO         1012    .text               c_w.l(sys_stackheap_outer.o)
+    0x0000642e   0x0000000c   Code   RO         1014    .text               c_w.l(exit.o)
+    0x0000643a   0x00000002   PAD
+    0x0000643c   0x00000008   Code   RO         1022    .text               c_w.l(libspace.o)
+    0x00006444   0x0000000c   Code   RO         1083    .text               c_w.l(sys_exit.o)
+    0x00006450   0x00000002   Code   RO         1094    .text               c_w.l(use_no_semi.o)
+    0x00006452   0x00000000   Code   RO         1096    .text               c_w.l(indicate_semi.o)
+    0x00006452   0x00000002   PAD
+    0x00006454   0x00000026   Code   RO          987    x$fpl$ffltu         fz_ws.l(fflt_clz.o)
+    0x0000647a   0x00000000   Code   RO          996    x$fpl$usenofp       fz_ws.l(usenofp.o)
+    0x0000647a   0x00000480   Data   RO          851    .constdata          oled.o
+    0x000068fa   0x00000002   PAD
+    0x000068fc   0x00000011   Data   RO          441    .conststring        uart.o
+    0x0000690d   0x00000003   PAD
+    0x00006910   0x00000020   Data   RO         1148    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00003f50, Max: 0x00010000, ABSOLUTE)
@@ -1087,21 +1087,21 @@ Memory Map of the image
     0x20000000   0x00000004   Data   RW            4    .data               system_mk60dz10.o
     0x20000004   0x0000004f   Data   RW           63    .data               main.o
     0x20000053   0x00000001   Data   RW          201    .data               isr.o
-    0x20000054   0x00000008   Data   RW          320    .data               delay.o
-    0x2000005c   0x00000008   Data   RW          473    .data               uart.o
-    0x20000064   0x00000008   Data   RW          671    .data               sd.o
-    0x2000006c   0x0000000c   Data   RW          715    .data               enet.o
-    0x20000078   0x00000003   Data   RW          883    .data               ccd.o
+    0x20000054   0x00000008   Data   RW          270    .data               delay.o
+    0x2000005c   0x00000008   Data   RW          442    .data               uart.o
+    0x20000064   0x00000008   Data   RW          652    .data               sd.o
+    0x2000006c   0x0000000c   Data   RW          702    .data               enet.o
+    0x20000078   0x00000003   Data   RW          877    .data               ccd.o
     0x2000007b   0x00000001   PAD
-    0x2000007c   0x00000004   Data   RW          915    .data               data_sent.o
+    0x2000007c   0x00000004   Data   RW          906    .data               data_sent.o
     0x20000080   0x000006ec   Zero   RW           62    .bss                main.o
-    0x2000076c   0x00000024   Zero   RW          290    .bss                sys.o
-    0x20000790   0x00000086   Zero   RW          471    .bss                uart.o
-    0x20000816   0x000030d0   Zero   RW          714    .bss                enet.o
-    0x200038e6   0x00000186   Zero   RW          914    .bss                data_sent.o
-    0x20003a6c   0x00000082   Zero   RW          946    .bss                menu.o
+    0x2000076c   0x00000024   Zero   RW          236    .bss                sys.o
+    0x20000790   0x00000086   Zero   RW          440    .bss                uart.o
+    0x20000816   0x000030d0   Zero   RW          701    .bss                enet.o
+    0x200038e6   0x00000186   Zero   RW          905    .bss                data_sent.o
+    0x20003a6c   0x00000082   Zero   RW          933    .bss                menu.o
     0x20003aee   0x00000002   PAD
-    0x20003af0   0x00000060   Zero   RW         1035    .bss                c_w.l(libspace.o)
+    0x20003af0   0x00000060   Zero   RW         1023    .bss                c_w.l(libspace.o)
     0x20003b50   0x00000000   Zero   RW           50    HEAP                startup_mk60dz10.o
     0x20003b50   0x00000400   Zero   RW           49    STACK               startup_mk60dz10.o
 
@@ -1114,27 +1114,27 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
       1224         62          0          0          0       7282   adc.o
-      2892        214          0          3          0       4949   ccd.o
-       412         26          0          0          0        931   chuinit.o
-       912         96          0          4        390       5441   data_sent.o
-       220         18          0          8          0       1020   delay.o
-       884         40          0          0          0       2839   dma.o
+      2960        218          0          3          0       5081   ccd.o
+       412         26          0          0          0      23086   chuinit.o
+       912         96          0          4        390       3079   data_sent.o
+       220         18          0          8          0       3162   delay.o
+       884         40          0          0          0       5643   dma.o
       1848        276          0         12      12496      30810   enet.o
-      2640        256          0          0          0       3289   ftm.o
-      1684         72          0          0          0       4208   gpio.o
-       414        104          0          1          0      21835   isr.o
-       688        134          0         79       1772       6630   main.o
-      1044        166          0          0        130       2784   menu.o
+      2640        256          0          0          0       6085   ftm.o
+      1684         72          0          0          0       7956   gpio.o
+       414        104          0          1          0       1721   isr.o
+       708        134          0         79       1772     266224   main.o
+      1044        166          0          0        130       1796   menu.o
       1326         12       1152          0          0       3992   oled.o
-       656         42          0          0          0       2523   pit.o
-      2072        130          0          8          0       5954   sd.o
+       656         42          0          0          0       3071   pit.o
+      2072        130          0          8          0      14054   sd.o
         76         38       1024          0       1024        952   startup_mk60dz10.o
       1836        160          0          0         36      27708   sys.o
        416         28          0          4          0     239293   system_mk60dz10.o
       2740        748         17          8        134       7224   uart.o
 
     ----------------------------------------------------------------------
-     23988       2622       2230        128      15984     379664   Object Totals
+     24076       2626       2230        128      15984     658219   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          4          0          5          1          2          0   (incl. Padding)
 
@@ -1189,15 +1189,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     24610       2638       2230        128      16080     378660   Grand Totals
-     24610       2638       2230        128      16080     378660   ELF Image Totals
-     24610       2638       2230        128          0          0   ROM Totals
+     24698       2642       2230        128      16080     657215   Grand Totals
+     24698       2642       2230        128      16080     657215   ELF Image Totals
+     24698       2642       2230        128          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                26840 (  26.21kB)
+    Total RO  Size (Code + RO Data)                26928 (  26.30kB)
     Total RW  Size (RW Data + ZI Data)             16208 (  15.83kB)
-    Total ROM Size (Code + RO Data + RW Data)      26968 (  26.34kB)
+    Total ROM Size (Code + RO Data + RW Data)      27056 (  26.42kB)
 
 ==============================================================================
 

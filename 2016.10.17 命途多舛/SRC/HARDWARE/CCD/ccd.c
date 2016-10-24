@@ -274,6 +274,20 @@ void CCD_HeiXian(void)
 	}
 	if (Left != 6 && Right != 122 && leixin == 0) Budao = (Right - Left) / 2;
 	
+	if (Left == 6 && Center == 10)
+	{
+		for (j = Right;j <= 122;j++)
+		{
+			P1[j] = value_min;
+		}
+	}
+	if (Right == 122 && Center == 118)
+	{
+		for (j = Left;j >= 6;j--)
+		{
+			P1[j] = value_min;
+		}
+	}
 	/********************************≤πœﬂ¥¶¿Ì********************************/
 	
 	if (Left != 6 && Right == 122)
@@ -414,7 +428,7 @@ void CCD_HeiXian(void)
 		if (CenterLast[0] <= 63) Center = 40;
 		if (CenterLast[0] >  63) Center = 86;
 	}
-	if (CenterLast[0] - Center >= 50 || Center - CenterLast[0] >= 50)
+	if (CenterLast[0] - Center >= 60 || Center - CenterLast[0] >= 60)
 	{
 		Center = CenterLast[0];
 	}
